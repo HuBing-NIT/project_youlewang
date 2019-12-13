@@ -1,0 +1,64 @@
+@mixin ellipse($w:200px, $h:30px) {
+    width: $w;
+    height: $h;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#walk {
+    background-color: #f3f4f6;
+}
+
+#walk .walk {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#walk .walk h1 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#walk .walk nav {
+    li {
+        width: 200px;
+        height: 280px;
+        padding: 15px;
+        margin: 6px 6px 0 px;
+        background: gray;
+        float: left;
+        a {
+            width: 200px;
+            height: 200px;
+            img {
+                width: 200px;
+            }
+        }
+        .prod-name {
+            line-height: 22px;
+            height: 22px;
+            font-weight: bold;
+            overflow: hidden;
+            a {
+                font-size: 14px;
+                display: block;
+                color: #333;
+                @include ellipse(200px, 22px);
+            }
+        }
+        .prod-price {
+            margin-top: 5px;
+        }
+    }
+}
+
+#walk .walk nav {
+    .left {
+        margin-left: 0;
+    }
+    .right {
+        margin-right: 0;
+    }
+}
