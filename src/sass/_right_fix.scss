@@ -1,0 +1,33 @@
+@charset "utf-8";
+.right_fix {
+    width: 40px;
+    height: 100%;
+    background: #6c6c6c;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+#louti {
+    width: 32px;
+    position: fixed;
+    left: 110px;
+    bottom: 26px;
+    a {
+        display: block;
+        width: 32px;
+        height: 32px;
+        text-align: center;
+        border-bottom: dotted 1px #ccc;
+        padding: 10px 0;
+        span {
+            line-height: 14px;
+            height: 31px;
+            color: #999;
+            font-family: verdana;
+            background: #f3f4f6;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+    }
+}

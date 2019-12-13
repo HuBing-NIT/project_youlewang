@@ -1,0 +1,115 @@
+@mixin ellipse($w:200px, $h:30px) {
+    width: $w;
+    height: $h;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+%shop_list_zone {
+    width: 1200px;
+    height: 592px;
+    margin: 0 auto;
+    // background: blueviolet;
+    margin-bottom: 20px;
+}
+
+#shop_list {
+    width: 1200px;
+    margin: 0 auto;
+    .food {
+        @extend %shop_list_zone;
+    }
+    ;
+    .home_must {
+        @extend %shop_list_zone;
+    }
+    ;
+    .intel_live {
+        @extend %shop_list_zone;
+    }
+    ;
+    .fashion_life {
+        @extend %shop_list_zone;
+    }
+    ;
+    .beauty_care {
+        @extend %shop_list_zone;
+    }
+}
+
+.list_title {
+    width: 1200px;
+    height: 40px;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #ff7b30;
+    i {
+        margin-top: 3px;
+        width: 5px;
+        height: 25px;
+        background: #ff7b30;
+        display: inline-block;
+        float: left;
+    }
+    h3 {
+        float: left;
+        margin: 0 10px 0 15px;
+        font-size: 22px;
+        font-weight: bolder;
+        color: #ff7b30;
+    }
+    p {
+        float: left;
+        margin-top: 12px;
+        line-height: 16px;
+        a {
+            margin-left: 10px;
+            color: #99999b;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        a:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.list_item {
+    width: 1200px;
+    height: 550px;
+    background: snow;
+    .col_left {
+        width: 270px;
+        height: 550px;
+        float: left;
+    }
+    .col_main {
+        width: 930px;
+        height: 550px;
+        float: left;
+        li {
+            background: white;
+            width: 202px;
+            height: 250px;
+            float: left;
+            padding: 10px;
+            margin: 0 0 10px 10px;
+            a {}
+            p:nth-child(2) {
+                width: 200px;
+                padding: 0 5px;
+                margin-top: 10px;
+                font-size: 14px;
+                font-weight: bold;
+                @include ellipse(200px, 17px)
+            }
+            p:nth-child(3) {
+                margin-top: 8px;
+                line-height: 18px;
+                text-align: center;
+                font-size: 16px;
+                color: #c52e13;
+            }
+        }
+    }
+}

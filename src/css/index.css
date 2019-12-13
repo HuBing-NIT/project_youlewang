@@ -1,0 +1,193 @@
+header {
+  height: 116px; }
+  header #header {
+    width: 1200px;
+    height: 36px;
+    background: #ccc;
+    margin: 0 auto; }
+    header #header .header {
+      height: 36px;
+      background: red; }
+  header .header_pic {
+    height: 80px;
+    background: #8131cc;
+    text-align: center; }
+
+.right_fix {
+  width: 40px;
+  height: 100%;
+  background: #6c6c6c;
+  position: fixed;
+  top: 0;
+  right: 0; }
+
+#louti {
+  width: 32px;
+  position: fixed;
+  left: 110px;
+  bottom: 26px; }
+  #louti a {
+    display: block;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    border-bottom: dotted 1px #ccc;
+    padding: 10px 0; }
+    #louti a span {
+      line-height: 14px;
+      height: 31px;
+      color: #999;
+      font-family: verdana;
+      background: #f3f4f6;
+      border-radius: 4px;
+      font-weight: bold; }
+
+#search {
+  height: 99px; }
+  #search .search {
+    height: 80px;
+    width: 1200px;
+    padding: 12px 0 7px 0;
+    background: skyblue;
+    margin: 0 auto; }
+
+#menu_nav {
+  height: 39px;
+  background: #a71b1b;
+  border-top: 1px solid #7a090b; }
+  #menu_nav .menu_nav {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    color: #fff; }
+    #menu_nav .menu_nav .menu_nav_left {
+      width: 190px;
+      float: left;
+      height: 100%; }
+    #menu_nav .menu_nav .menu_nav_right {
+      width: 1010px;
+      float: left;
+      height: 100%; }
+
+#lunbo {
+  height: 467px; }
+  #lunbo li {
+    height: 467px;
+    text-align: center; }
+    #lunbo li img {
+      height: 467px;
+      width: 1200px; }
+
+.grid-lmr {
+  width: 1200px;
+  margin: 0 auto;
+  height: 378px;
+  overflow: hidden; }
+  .grid-lmr .col-main {
+    width: 100%;
+    height: 358px;
+    padding-top: 20px; }
+    .grid-lmr .col-main .slide-index {
+      height: 53px;
+      background: red; }
+    .grid-lmr .col-main .slide-items {
+      height: 1425px;
+      background: green; }
+
+.topline3 {
+  width: 1200px;
+  height: 130px;
+  margin: 20px auto; }
+  .topline3 a {
+    width: 390px;
+    height: 130px;
+    float: left; }
+
+.topline3 a:nth-child(2) {
+  margin-left: 15px; }
+
+.topline3 a:nth-child(3) {
+  margin-left: 15px; }
+
+#shop_list .food, #shop_list .home_must, #shop_list .intel_live, #shop_list .fashion_life, #shop_list .beauty_care {
+  width: 1200px;
+  height: 592px;
+  margin: 0 auto;
+  margin-bottom: 20px; }
+
+#shop_list {
+  width: 1200px;
+  margin: 0 auto; }
+
+.list_title {
+  width: 1200px;
+  height: 40px;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #ff7b30; }
+  .list_title i {
+    margin-top: 3px;
+    width: 5px;
+    height: 25px;
+    background: #ff7b30;
+    display: inline-block;
+    float: left; }
+  .list_title h3 {
+    float: left;
+    margin: 0 10px 0 15px;
+    font-size: 22px;
+    font-weight: bolder;
+    color: #ff7b30; }
+  .list_title p {
+    float: left;
+    margin-top: 12px;
+    line-height: 16px; }
+    .list_title p a {
+      margin-left: 10px;
+      color: #99999b;
+      font-size: 14px;
+      font-weight: bold; }
+    .list_title p a:hover {
+      cursor: pointer; }
+
+.list_item {
+  width: 1200px;
+  height: 550px;
+  background: snow; }
+  .list_item .col_left {
+    width: 270px;
+    height: 550px;
+    float: left; }
+  .list_item .col_main {
+    width: 930px;
+    height: 550px;
+    float: left; }
+    .list_item .col_main li {
+      background: white;
+      width: 202px;
+      height: 250px;
+      float: left;
+      padding: 10px;
+      margin: 0 0 10px 10px; }
+      .list_item .col_main li p:nth-child(2) {
+        width: 200px;
+        padding: 0 5px;
+        margin-top: 10px;
+        font-size: 14px;
+        font-weight: bold;
+        width: 200px;
+        height: 17px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+      .list_item .col_main li p:nth-child(3) {
+        margin-top: 8px;
+        line-height: 18px;
+        text-align: center;
+        font-size: 16px;
+        color: #c52e13; }
+
+body {
+  font-family: "microsoft yahei";
+  background: #f3f4f6; }
+
+/*# sourceMappingURL=index.css.map */

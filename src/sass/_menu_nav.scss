@@ -1,0 +1,21 @@
+#menu_nav {
+    height: 39px;
+    background: #a71b1b;
+    border-top: 1px solid #7a090b;
+    .menu_nav {
+        width: 1200px;
+        height: 100%;
+        margin: 0 auto;
+        color: #fff;
+        .menu_nav_left {
+            width: 190px;
+            float: left;
+            height: 100%;
+        }
+        .menu_nav_right {
+            width: 1010px;
+            float: left;
+            height: 100%;
+        }
+    }
+}

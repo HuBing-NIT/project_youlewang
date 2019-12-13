@@ -1,0 +1,19 @@
+.topline3 {
+    width: 1200px;
+    height: 130px;
+    margin: 20px auto;
+    a {
+        width: 390px;
+        height: 130px;
+        // display: inline-block;
+        float: left;
+    }
+}
+
+@for $num from 2 to 4 {
+    //2-3
+    //$num=2-3
+    .topline3 a:nth-child(#{$num}) {
+        margin-left: 15px;
+    }
+}
