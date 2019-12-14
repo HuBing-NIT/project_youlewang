@@ -13,13 +13,28 @@ header {
     background: #8131cc;
     text-align: center; }
 
-.right_fix {
+.right_fix_tab {
   width: 40px;
   height: 100%;
   background: #6c6c6c;
   position: fixed;
   top: 0;
   right: 0; }
+  .right_fix_tab .fix_tab_top {
+    position: absolute;
+    top: 40px;
+    z-index: 1;
+    background-color: red; }
+    .right_fix_tab .fix_tab_top .jui-ubar-tab-item {
+      background-position: 8px 0;
+      cursor: pointer;
+      background-color: #6c6c6c; }
+  .right_fix_tab .fix_tab_middle {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    margin-top: -150px;
+    background-color: red; }
 
 #louti {
   width: 32px;
@@ -64,17 +79,137 @@ header {
       width: 190px;
       float: left;
       height: 100%;
-      margin-top: -1px; }
+      margin-top: -1px;
+      background-image: url(../img/spirit_1.png);
+      background-repeat: no-repeat;
+      background-position: 0 -16px; }
     #menu_nav .menu_nav .menu_nav_right {
       width: 1010px;
       float: left;
       height: 100%; }
 
-.menu_nav_left a {
+.menu_nav_left .cate-hd {
   height: 40px;
   font-family: Tahoma;
   font-size: 12px;
   display: block; }
+
+.menu_nav_left .cate-bd {
+  width: 190px;
+  height: 468px;
+  position: absolute;
+  background: rgba(248, 248, 248, 0.9); }
+  .menu_nav_left .cate-bd dt {
+    position: relative;
+    line-height: 24px;
+    height: 24px;
+    z-index: 3;
+    padding: 6px 5px 6px 15px;
+    overflow: hidden; }
+    .menu_nav_left .cate-bd dt a {
+      color: #333;
+      font-size: 13px;
+      margin-right: 3px; }
+      .menu_nav_left .cate-bd dt a i {
+        display: inline-block;
+        vertical-align: middle;
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+        transform: all .5s linear;
+        overflow: hidden;
+        background-image: url(../img/spirit_1.png);
+        background-repeat: no-repeat; }
+  .menu_nav_left .cate-bd .rightMenu {
+    width: 1010px; }
+
+.menu_nav_left .cate-bd dt .a1 i {
+  background-position: -144px 0px; }
+
+.menu_nav_left .cate-bd dt .a2 i {
+  background-position: -48px 0px; }
+
+.menu_nav_left .cate-bd dt .a3 i {
+  background-position: -192px 0px; }
+
+.menu_nav_left .cate-bd dt .a4 i {
+  background-position: -176px 0px; }
+
+.menu_nav_left .cate-bd dt .a5 i {
+  background-position: -32px 0px; }
+
+.menu_nav_left .cate-bd dt .a6 i {
+  background-position: -128px 0px; }
+
+.menu_nav_left .cate-bd dt .a7 i {
+  background-position: -80px 0px; }
+
+.menu_nav_left .cate-bd dt .a8 i {
+  background-position: 0 0; }
+
+.menu_nav_left .cate-bd dt .a9 i {
+  background-position: -64px 0px; }
+
+.menu_nav_left .cate-bd dt .a10 i {
+  background-position: -112px 0px; }
+
+.menu_nav_left .cate-bd dt .a11 i {
+  background-position: -16px 0px; }
+
+.menu_nav_left .cate-bd dt .a12 i {
+  background-position: -272px -16px; }
+
+.cate-bd .rightMenu {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 189px;
+  background: #fff;
+  z-index: 4;
+  box-shadow: 1px 2px 1px 0 #ccc; }
+  .cate-bd .rightMenu .cate-body {
+    margin: 0 15px; }
+  .cate-bd .rightMenu .cate-sub {
+    width: 695px;
+    overflow: hidden;
+    float: left;
+    position: relative;
+    float: left; }
+  .cate-bd .rightMenu .cate-ad {
+    width: 260px;
+    padding: 5px 0 10px 15px;
+    float: right; }
+    .cate-bd .rightMenu .cate-ad a {
+      display: inline-block;
+      float: left;
+      padding: 0 14px 0 14px;
+      margin-top: 7px; }
+    .cate-bd .rightMenu .cate-ad .b_pic {
+      padding: 0; }
+
+.cate-body .cate-list .cate-sub .cate-sub-dl {
+  line-height: 22px;
+  overflow: hidden;
+  padding-top: 6px; }
+  .cate-body .cate-list .cate-sub .cate-sub-dl .sub-list-dt {
+    float: left;
+    overflow: hidden;
+    width: 100px;
+    padding: 6px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: black; }
+  .cate-body .cate-list .cate-sub .cate-sub-dl .sub-list-dd {
+    overflow: hidden;
+    padding: 6px 0;
+    height: auto;
+    width: 575px;
+    border-bottom: 1px solid #ebebeb; }
+    .cate-body .cate-list .cate-sub .cate-sub-dl .sub-list-dd a {
+      color: #666;
+      white-space: nowrap;
+      margin-right: 20px;
+      float: left; }
 
 .menu_nav_right li {
   float: left;
@@ -209,6 +344,14 @@ header {
         font-size: 16px;
         color: #c52e13; }
 
+.clear::after {
+  content: "";
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  display: block;
+  visibility: hidden; }
+
 #walk {
   background-color: #f3f4f6; }
 
@@ -220,18 +363,25 @@ header {
   text-align: center;
   font-size: 22px;
   font-weight: bold; }
+#walk .walk h2 {
+  background: url("http://i0.ulecdn.com/ule/www/hp/2014/0710/images/end.png") center center no-repeat;
+  margin: 35px auto 30px auto;
+  font-size: 16px;
+  color: #bbb;
+  text-align: center;
+  height: 30px;
+  line-height: 50px; }
 
 #walk .walk nav li {
+  background: #fff;
   width: 200px;
   height: 280px;
   padding: 15px;
-  margin: 6px 6px 0 px;
-  background: gray;
   float: left; }
-  #walk .walk nav li a {
+  #walk .walk nav li .prod-img {
     width: 200px;
     height: 200px; }
-    #walk .walk nav li a img {
+    #walk .walk nav li .prod-img img {
       width: 200px; }
   #walk .walk nav li .prod-name {
     line-height: 22px;
@@ -248,12 +398,31 @@ header {
       text-overflow: ellipsis;
       white-space: nowrap; }
   #walk .walk nav li .prod-price {
-    margin-top: 5px; }
+    margin-top: 5px;
+    font-size: 16px;
+    color: #c52e13; }
+    #walk .walk nav li .prod-price strong {
+      margin-left: 4px;
+      font-size: 16px; }
+  #walk .walk nav li .shop-area {
+    padding: 5px 0;
+    height: 16px; }
+    #walk .walk nav li .shop-area a {
+      float: left;
+      line-height: 20px; }
+    #walk .walk nav li .shop-area .area {
+      float: right;
+      width: 24px;
+      cursor: text;
+      display: block;
+      line-height: 20px; }
 
 #walk .walk nav .left {
-  margin-left: 0; }
+  margin: 6px 6px 0 0; }
 #walk .walk nav .right {
-  margin-right: 0; }
+  margin: 6px 0 0 6px; }
+#walk .walk nav .middle {
+  margin: 6px 6px 0 6px; }
 
 body {
   font-family: "microsoft yahei";

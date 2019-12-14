@@ -1,13 +1,56 @@
 @charset "utf-8";
-.right_fix {
+$sprit1:'../img/spirit_1.png'; //精灵图1
+$sprit2:'../img/spirit_2.png'; //精灵图2
+$sprit3:'../img/spirit_3.png'; //精灵图3
+$sprit4:'../img/spirit_4.png'; //精灵图4
+// 页面右侧固定定位布局
+.right_fix_tab {
     width: 40px;
     height: 100%;
     background: #6c6c6c;
     position: fixed;
     top: 0;
     right: 0;
+    .fix_tab_top {
+        // 右侧头部
+        position: absolute;
+        top: 40px;
+        z-index: 1;
+        background-color: red;
+        .jui-ubar-tab-item {
+            background-position: 8px 0;
+            cursor: pointer;
+            background-color: #6c6c6c;
+        }
+    }
+    .fix_tab_middle {
+        position: absolute;
+        top: 50%;
+        z-index: 2;
+        margin-top: -150px;
+        background-color: red;
+    }
 }
 
+// $pos1:-144px 0px;
+// $pos2:-48px 0px;
+// $pos3:-192px 0px;
+// $pos4:-176px 0px;
+// $pos5:-32px 0px;
+// $pos6:-128px 0px;
+// $pos7:-80px 0px;
+// $pos8:0 0;
+// $pos9:-64px 0px;
+// $pos10:-112px 0px;
+// $pos11:-16px 0px;
+// $pos12:-272px -16px;
+// $sp_pos:$pos1 $pos2 $pos3 $pos4 $pos5 $pos6 $pos7 $pos8 $pos9 $pos10 $pos11 $pos12;
+// @for $i from 1 to length($sp_pos)+1 {
+//     .menu_nav_left .cate-bd dt .a#{$i} i {
+//         background-position: nth($sp_pos, $i);
+//     }
+// }
+// 楼梯效果
 #louti {
     width: 32px;
     position: fixed;

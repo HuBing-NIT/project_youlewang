@@ -1,9 +1,24 @@
+@charset "utf-8";
 @mixin ellipse($w:200px, $h:30px) {
     width: $w;
     height: $h;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+@mixin clear() {
+    content: "";
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    display: block;
+    visibility: hidden;
+}
+
+//万能清除法
+.clear::after {
+    @include clear();
 }
 
 #walk {
@@ -15,21 +30,32 @@
     margin: 0 auto;
 }
 
-#walk .walk h1 {
-    text-align: center;
-    font-size: 22px;
-    font-weight: bold;
+#walk .walk {
+    h1 {
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    h2 {
+        background: url('http://i0.ulecdn.com/ule/www/hp/2014/0710/images/end.png') center center no-repeat;
+        //background-image: url(url('http://i0.ulecdn.com/ule/www/hp/2014/0710/images/end.png'));
+        margin: 35px auto 30px auto;
+        font-size: 16px;
+        color: #bbb;
+        text-align: center;
+        height: 30px;
+        line-height: 50px;
+    }
 }
 
 #walk .walk nav {
     li {
+        background: #fff;
         width: 200px;
         height: 280px;
         padding: 15px;
-        margin: 6px 6px 0 px;
-        background: gray;
         float: left;
-        a {
+        .prod-img {
             width: 200px;
             height: 200px;
             img {
@@ -45,20 +71,45 @@
                 font-size: 14px;
                 display: block;
                 color: #333;
-                @include ellipse(200px, 22px);
+                @include ellipse(200px,
+                22px);
             }
         }
         .prod-price {
             margin-top: 5px;
+            font-size: 16px;
+            color: #c52e13;
+            strong {
+                margin-left: 4px;
+                font-size: 16px;
+            }
+        }
+        .shop-area {
+            padding: 5px 0;
+            height: 16px;
+            a {
+                float: left;
+                line-height: 20px;
+            }
+            .area {
+                float: right;
+                width: 24px;
+                cursor: text;
+                display: block;
+                line-height: 20px;
+            }
         }
     }
 }
 
 #walk .walk nav {
     .left {
-        margin-left: 0;
+        margin: 6px 6px 0 0;
     }
     .right {
-        margin-right: 0;
+        margin: 6px 0 0 6px;
+    }
+    .middle {
+        margin: 6px 6px 0 6px;
     }
 }

@@ -1,3 +1,13 @@
+@charset "utf-8";
+$sprit1:'../img/spirit_1.png'; //精灵图1
+$sprit2:'../img/spirit_2.png'; //精灵图2
+$sprit3:'../img/spirit_3.png'; //精灵图3
+$sprit4:'../img/spirit_4.png'; //精灵图4
+@mixin spirit() {
+    background-image: url(#{$sprit1});
+    background-repeat: no-repeat;
+}
+
 #menu_nav {
     height: 39px;
     background: #a71b1b;
@@ -12,6 +22,9 @@
             float: left;
             height: 100%;
             margin-top: -1px;
+            @include spirit();
+            background-position: 0 -16px;
+            // background: url(../img/spirit_1.png) no-repeat 0 -16px;
         }
         .menu_nav_right {
             width: 1010px;
@@ -21,11 +34,127 @@
     }
 }
 
-.menu_nav_left a {
+.menu_nav_left .cate-hd {
     height: 40px;
     font-family: Tahoma;
     font-size: 12px;
     display: block;
+}
+
+.menu_nav_left .cate-bd {
+    width: 190px;
+    height: 468px;
+    position: absolute;
+    background: rgba(248, 248, 248, .9);
+    dt {
+        position: relative;
+        line-height: 24px;
+        height: 24px;
+        z-index: 3;
+        padding: 6px 5px 6px 15px;
+        overflow: hidden;
+        a {
+            color: #333;
+            font-size: 13px;
+            margin-right: 3px;
+            i {
+                display: inline-block;
+                vertical-align: middle;
+                width: 16px;
+                height: 16px;
+                margin-right: 10px;
+                transform: all .5s linear;
+                overflow: hidden;
+                @include spirit();
+            }
+        }
+    }
+    .rightMenu {
+        width: 1010px;
+    }
+}
+
+$pos1:-144px 0px;
+$pos2:-48px 0px;
+$pos3:-192px 0px;
+$pos4:-176px 0px;
+$pos5:-32px 0px;
+$pos6:-128px 0px;
+$pos7:-80px 0px;
+$pos8:0 0;
+$pos9:-64px 0px;
+$pos10:-112px 0px;
+$pos11:-16px 0px;
+$pos12:-272px -16px;
+$sp_pos:$pos1 $pos2 $pos3 $pos4 $pos5 $pos6 $pos7 $pos8 $pos9 $pos10 $pos11 $pos12;
+@for $i from 1 to length($sp_pos)+1 {
+    .menu_nav_left .cate-bd dt .a#{$i} i {
+        background-position: nth($sp_pos, $i);
+    }
+}
+
+.cate-bd .rightMenu {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 189px;
+    background: #fff;
+    z-index: 4;
+    box-shadow: 1px 2px 1px 0 #ccc;
+    .cate-body {
+        margin: 0 15px;
+    }
+    .cate-sub {
+        width: 695px;
+        overflow: hidden;
+        float: left;
+        position: relative;
+        float: left;
+        // background-color: #ccc;
+    }
+    .cate-ad {
+        width: 260px;
+        padding: 5px 0 10px 15px;
+        float: right;
+        // background-color: red;
+        a {
+            display: inline-block;
+            float: left;
+            padding: 0 14px 0 14px;
+            margin-top: 7px;
+        }
+        .b_pic {
+            padding: 0;
+        }
+    }
+}
+
+.cate-body .cate-list .cate-sub .cate-sub-dl {
+    line-height: 22px;
+    overflow: hidden;
+    padding-top: 6px;
+    .sub-list-dt {
+        float: left;
+        overflow: hidden;
+        width: 100px;
+        padding: 6px 10px;
+        font-size: 14px;
+        font-weight: bold;
+        color: black;
+    }
+    .sub-list-dd {
+        overflow: hidden;
+        padding: 6px 0;
+        height: auto;
+        width: 575px;
+        border-bottom: 1px solid #ebebeb;
+        a {
+            color: #666;
+            white-space: nowrap;
+            margin-right: 20px;
+            float: left;
+        }
+    }
 }
 
 .menu_nav_right li {
