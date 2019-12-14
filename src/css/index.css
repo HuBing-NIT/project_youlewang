@@ -36,6 +36,16 @@ header {
     margin-top: -150px;
     background-color: red; }
 
+.jui-ubar-tab-logo {
+  position: relative;
+  z-index: 2;
+  padding: 18px 8px;
+  width: 24px; }
+  .jui-ubar-tab-logo i {
+    display: block;
+    width: 24px;
+    height: 24px; }
+
 #louti {
   width: 32px;
   position: fixed;
@@ -236,6 +246,14 @@ header {
       height: 467px;
       width: 1200px; }
 
+.active {
+  height: 51px;
+  line-height: 50px;
+  padding-bottom: 0;
+  border-bottom: solid 1px #c5181c;
+  background: #fdf3f2;
+  color: #d63334; }
+
 .grid-lmr {
   width: 1200px;
   margin: 0 auto;
@@ -244,13 +262,78 @@ header {
   .grid-lmr .col-main {
     width: 100%;
     height: 358px;
-    padding-top: 20px; }
+    margin-top: 20px;
+    background: white; }
     .grid-lmr .col-main .slide-index {
       height: 53px;
-      background: red; }
+      width: 100%; }
     .grid-lmr .col-main .slide-items {
-      height: 1425px;
-      background: green; }
+      height: 1425px; }
+
+.slide-index h4 {
+  float: left;
+  width: 210px;
+  height: 50px;
+  line-height: 50px;
+  padding-bottom: 2px;
+  text-align: center;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: normal; }
+  .slide-index h4 i {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background-image: url(../img/spirit_4.png);
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-right: 5px; }
+
+.slide-index h4 .i2 {
+  background-position: -104px 0; }
+
+.slide-index h4 .i3 {
+  background-position: -51px 0; }
+
+.slide-items ul {
+  width: 1200px;
+  height: 285px;
+  padding: 0; }
+  .slide-items ul li {
+    padding: 10px 19px;
+    width: 200px;
+    height: 259px;
+    border-bottom: 0;
+    float: left; }
+    .slide-items ul li a {
+      display: block;
+      position: relative; }
+      .slide-items ul li a img {
+        width: 200px;
+        height: 200px; }
+    .slide-items ul li .prod-name {
+      float: none;
+      width: 100%;
+      margin-left: 0;
+      height: 22px;
+      line-height: 22px;
+      width: 200px;
+      height: 20px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
+    .slide-items ul li .prod-price {
+      float: none;
+      width: 100%;
+      margin-left: 0;
+      text-align: center; }
+      .slide-items ul li .prod-price span {
+        color: #c52e13; }
+      .slide-items ul li .prod-price strong {
+        margin-left: 4px;
+        font-size: 18px;
+        font-weight: normal; }
 
 .topline3 {
   width: 1200px;
@@ -277,24 +360,56 @@ header {
   width: 1200px;
   margin: 0 auto; }
 
+.list_title_1 {
+  border-bottom: 1px solid #ff7b30; }
+  .list_title_1 i {
+    background: #ff7b30; }
+  .list_title_1 h3 {
+    color: #ff7b30; }
+
+.list_title_2 {
+  border-bottom: 1px solid #1bb145; }
+  .list_title_2 i {
+    background: #1bb145; }
+  .list_title_2 h3 {
+    color: #1bb145; }
+
+.list_title_3 {
+  border-bottom: 1px solid #2289ff; }
+  .list_title_3 i {
+    background: #2289ff; }
+  .list_title_3 h3 {
+    color: #2289ff; }
+
+.list_title_4 {
+  border-bottom: 1px solid #000; }
+  .list_title_4 i {
+    background: #000; }
+  .list_title_4 h3 {
+    color: #000; }
+
+.list_title_5 {
+  border-bottom: 1px solid #ff2f91; }
+  .list_title_5 i {
+    background: #ff2f91; }
+  .list_title_5 h3 {
+    color: #ff2f91; }
+
 .list_title {
   width: 1200px;
   height: 40px;
-  padding-bottom: 1px;
-  border-bottom: 1px solid #ff7b30; }
+  padding-bottom: 1px; }
   .list_title i {
     margin-top: 3px;
     width: 5px;
     height: 25px;
-    background: #ff7b30;
     display: inline-block;
     float: left; }
   .list_title h3 {
     float: left;
     margin: 0 10px 0 15px;
     font-size: 22px;
-    font-weight: bolder;
-    color: #ff7b30; }
+    font-weight: bolder; }
   .list_title p {
     float: left;
     margin-top: 12px;
@@ -423,6 +538,79 @@ header {
   margin: 6px 0 0 6px; }
 #walk .walk nav .middle {
   margin: 6px 6px 0 6px; }
+
+.footer {
+  min-width: 1200px;
+  font-size: 12px;
+  background-color: white;
+  clear: both;
+  padding: 20px 0px; }
+
+.footer .layout {
+  width: 1200px;
+  margin: 0 auto; }
+  .footer .layout .footer-banner {
+    height: 56px;
+    border: solid 1px #ddd;
+    border-width: 1px 0;
+    padding: 17px 0; }
+
+.foot-banner {
+  height: 56px;
+  border: solid 1px #ddd;
+  border-width: 1px 0;
+  padding: 17px 0;
+  background: url(../img/spirit_5.png) no-repeat;
+  background-position: 0 -125px; }
+
+.foot-helper {
+  padding: 10px 0 20px;
+  text-align: left;
+  overflow: hidden;
+  width: 100%; }
+
+.foot-helper ul {
+  width: 1300px; }
+
+.foot-helper li {
+  padding: 5px 46px 0 0; }
+
+.foot-helper ul li {
+  padding-right: 96px;
+  width: 120px;
+  float: left; }
+  .foot-helper ul li h4 {
+    color: #666;
+    line-height: 22px;
+    margin: 0 0 5px;
+    border-bottom: dotted 1px #ccc; }
+  .foot-helper ul li a {
+    display: block;
+    line-height: 22px;
+    color: #888; }
+
+.foot-license {
+  line-height: 20px;
+  padding: 15px 0 5px;
+  text-align: center;
+  color: #999;
+  border-top: solid 1px #ddd; }
+  .foot-license ul {
+    height: 20px;
+    overflow: hidden; }
+  .foot-license li {
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    margin-right: 9px; }
+
+.foot-copyright {
+  line-height: 20px;
+  color: #999;
+  font-family: verdana; }
+  .foot-copyright span {
+    color: #ddd;
+    margin: 0 5px; }
 
 body {
   font-family: "microsoft yahei";

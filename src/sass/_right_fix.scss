@@ -3,6 +3,11 @@ $sprit1:'../img/spirit_1.png'; //精灵图1
 $sprit2:'../img/spirit_2.png'; //精灵图2
 $sprit3:'../img/spirit_3.png'; //精灵图3
 $sprit4:'../img/spirit_4.png'; //精灵图4
+@mixin sprit2() {
+    background-image: url(#{$sprit2});
+    background-repeat: no-repeat;
+}
+
 // 页面右侧固定定位布局
 .right_fix_tab {
     width: 40px;
@@ -29,6 +34,18 @@ $sprit4:'../img/spirit_4.png'; //精灵图4
         z-index: 2;
         margin-top: -150px;
         background-color: red;
+    }
+}
+
+.jui-ubar-tab-logo {
+    position: relative;
+    z-index: 2;
+    padding: 18px 8px;
+    width: 24px;
+    i {
+        display: block;
+        width: 24px;
+        height: 24px;
     }
 }
 
