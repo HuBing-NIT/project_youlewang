@@ -1,18 +1,3 @@
-header {
-  height: 116px; }
-  header #header {
-    width: 1200px;
-    height: 36px;
-    background: #ccc;
-    margin: 0 auto; }
-    header #header .header {
-      height: 36px;
-      background: red; }
-  header .header_pic {
-    height: 80px;
-    background: #8131cc;
-    text-align: center; }
-
 .right_fix_tab {
   width: 40px;
   height: 100%;
@@ -73,8 +58,66 @@ header {
     height: 80px;
     width: 1200px;
     padding: 12px 0 7px 0;
-    background: skyblue;
     margin: 0 auto; }
+
+.head-logo {
+  height: 75px;
+  float: left;
+  background: url(http://i0.ulecdn.com/ule/header/images/logo.png) no-repeat left bottom; }
+  .head-logo a {
+    width: 75px;
+    text-indent: -10000px;
+    overflow: hidden;
+    display: block;
+    float: left;
+    height: 75px; }
+
+.head-shopcart {
+  background: url(http://i0.ulecdn.com/ule/header/images/header_1407.png) no-repeat;
+  float: right;
+  position: relative;
+  margin-top: 10px;
+  width: 158px;
+  height: 34px;
+  background-position: 0 -86px;
+  border: 1px solid #bdbdbd;
+  background-color: #fff;
+  z-index: 500; }
+  .head-shopcart .shopcart-sum {
+    padding-left: 31px;
+    line-height: 33px;
+    cursor: pointer; }
+    .head-shopcart .shopcart-sum .shopcart-num {
+      right: 20px;
+      top: 0;
+      color: #900;
+      text-align: center;
+      font-size: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+      position: absolute;
+      width: 58px;
+      height: 30px;
+      overflow: hidden; }
+
+.shopcart-list {
+  display: none;
+  top: 41px;
+  right: -1px;
+  position: absolute;
+  width: 280px;
+  padding: 0;
+  background-color: #fff;
+  border: 1px solid #bdbdbd;
+  color: #666;
+  z-index: 1; }
+  .shopcart-list li.list-empty {
+    text-align: center;
+    padding: 8px;
+    margin: 0;
+    line-height: 16px;
+    color: #333;
+    border-bottom: 0;
+    height: auto; }
 
 #menu_nav {
   height: 39px;
@@ -539,81 +582,13 @@ header {
 #walk .walk nav .middle {
   margin: 6px 6px 0 6px; }
 
-.footer {
-  min-width: 1200px;
-  font-size: 12px;
-  background-color: white;
-  clear: both;
-  padding: 20px 0px; }
-
-.footer .layout {
-  width: 1200px;
-  margin: 0 auto; }
-  .footer .layout .footer-banner {
-    height: 56px;
-    border: solid 1px #ddd;
-    border-width: 1px 0;
-    padding: 17px 0; }
-
-.foot-banner {
-  height: 56px;
-  border: solid 1px #ddd;
-  border-width: 1px 0;
-  padding: 17px 0;
-  background: url(../img/spirit_5.png) no-repeat;
-  background-position: 0 -125px; }
-
-.foot-helper {
-  padding: 10px 0 20px;
-  text-align: left;
-  overflow: hidden;
-  width: 100%; }
-
-.foot-helper ul {
-  width: 1300px; }
-
-.foot-helper li {
-  padding: 5px 46px 0 0; }
-
-.foot-helper ul li {
-  padding-right: 96px;
-  width: 120px;
-  float: left; }
-  .foot-helper ul li h4 {
-    color: #666;
-    line-height: 22px;
-    margin: 0 0 5px;
-    border-bottom: dotted 1px #ccc; }
-  .foot-helper ul li a {
-    display: block;
-    line-height: 22px;
-    color: #888; }
-
-.foot-license {
-  line-height: 20px;
-  padding: 15px 0 5px;
-  text-align: center;
-  color: #999;
-  border-top: solid 1px #ddd; }
-  .foot-license ul {
-    height: 20px;
-    overflow: hidden; }
-  .foot-license li {
-    float: left;
-    height: 20px;
-    line-height: 20px;
-    margin-right: 9px; }
-
-.foot-copyright {
-  line-height: 20px;
-  color: #999;
-  font-family: verdana; }
-  .foot-copyright span {
-    color: #ddd;
-    margin: 0 5px; }
-
 body {
   font-family: "microsoft yahei";
   background: #f3f4f6; }
+
+.header_pic {
+  height: 80px;
+  background: #8131cc;
+  text-align: center; }
 
 /*# sourceMappingURL=index.css.map */
