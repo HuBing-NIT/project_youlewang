@@ -1,0 +1,126 @@
+@charset "utf-8";
+// 第二排logo
+#search {
+    height: 99px;
+    border-bottom: solid 4px #a71b1c;
+    .search {
+        height: 80px;
+        width: 1200px;
+        padding: 12px 0 7px 0;
+        margin: 0 auto;
+    }
+}
+
+.head-logo {
+    height: 75px;
+    float: left;
+    background: url(http://i0.ulecdn.com/ule/header/images/logo.png) no-repeat left bottom;
+    a {
+        width: 75px;
+        text-indent: -10000px;
+        overflow: hidden;
+        display: block;
+        float: left;
+        height: 75px;
+    }
+}
+
+// 注册主体部分
+#register {
+    background: #f7f7f7;
+    padding: 20px 0;
+    .reg_box {
+        width: 920px;
+        height: 580px;
+        background: #fff;
+        padding: 30px 15px 0 15px;
+        margin: 0 auto;
+    }
+}
+
+.reg_box .reg-title {
+    border-bottom: 1px solid #f0f0f0;
+    background: url(https://i0.ulecdn.com/i/login/2016/0808/title_tip.jpg) no-repeat center right;
+    // 标题内容文字样式
+    .reg-txt {
+        display: block;
+        width: 138px;
+        height: 46px;
+        line-height: 46px;
+        font-size: 16px;
+        color: #333;
+        border: 1px solid #f0f0f0;
+        border-bottom: 0px;
+        margin-left: 30px;
+        text-align: center;
+        cursor: pointer;
+    }
+}
+
+// 注册表单样式
+.form-main {
+    padding-left: 220px;
+    .item {
+        margin-top: 25px;
+        height: 40px;
+        position: relative;
+        label {
+            width: 70px;
+            height: 40px;
+            float: left;
+            font-size: 14px;
+            line-height: 40px;
+            color: #999;
+            text-align: right;
+            margin-right: 10px;
+        }
+        .inp {
+            width: 300px;
+            height: 40px;
+            float: left;
+            position: relative;
+            input {
+                width: 278px;
+                height: 38px;
+                line-height: 38px;
+                padding: 0 10px;
+                border: 1px solid #cacaca;
+                color: #333;
+                font-size: 14px;
+                position: absolute;
+            }
+            // 验证码
+            .inp_yzm {
+                width: 120px;
+            }
+            .set_yzm {
+                width: 120px;
+                display: inline-block;
+                position: absolute;
+                right: 10px;
+                height: 38px;
+                line-height: 38px;
+            }
+        }
+        .tip {
+            float: left;
+            width: 275px;
+            margin-left: 10px;
+            height: 40px;
+            font-size: 14px;
+            line-height: 40px;
+            color: #c52e15;
+            background: url(https://i0.ulecdn.com/i/login/2016/0808/icon.jpg) no-repeat 1000px 0px;
+        }
+        // 我接受
+        .check_txt {
+            color: #AEAEAE;
+            font-size: 14px;
+        }
+    }
+}
+
+// a标签蓝色
+.blueLink {
+    color: #03c;
+}
