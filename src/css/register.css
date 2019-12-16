@@ -94,7 +94,8 @@
       background: url(https://i0.ulecdn.com/i/login/2016/0808/icon.jpg) no-repeat 1000px 0px; }
     .form-main .item .check_txt {
       color: #AEAEAE;
-      font-size: 14px; }
+      font-size: 14px;
+      line-height: 40px; }
 
 .blueLink {
   color: #03c; }

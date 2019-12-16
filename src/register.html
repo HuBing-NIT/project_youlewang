@@ -8,7 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/register.css">
     <link rel="stylesheet" href="css/footer.css">
 </head>
 
@@ -19,15 +19,15 @@
         <div id="header">
             <div class="header">
                 <ul class="fl">
-                    <a target="_blank" class="home" href="index.html">邮乐首页</a>
+                    <a target="_blank" class="home">邮乐首页</a>
                 </ul>
 
 
                 <!-- header_right -->
                 <ul class="fr">
                     <li class="welcome">
-                        <a title="" href="index.html" target="_blank" class="blue"></a> 您好<span class="txt-welcome">，欢迎来到邮乐网</span>！</li>
-                    <li class="login"><a href="login.html" class="blue">[请登录]</a> <a href="register.html" class="blue">[免费注册]</a></li>
+                        <a title="" href="" target="_blank" class="blue"></a> 您好<span class="txt-welcome">，欢迎来到邮乐网</span>！</li>
+                    <li class="login"><a href="" class="blue">[请登录]</a> <a href="" class="blue">[免费注册]</a></li>
                     <li class="bldr dropdown myaccount">
                         <a class="txt-down" rel="nofollow">我的邮乐</a>
                         <ul>
@@ -68,20 +68,6 @@
 
     </header>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <section id="search">
         <div class="search">
             <!-- logo -->
@@ -93,54 +79,82 @@
 
 
 
-    <!-- login  main -->
-    <div id="wrapper">
-        <div class="login-from">
-            <span class="title">登录</span>
-            <div class="login-input">
-                <form action="" class="from-input">
-                    <!-- 用户名 -->
-                    <div class="username">
-                        <i class="user-icon"></i>
-                        <input type="text" class="inp-user" placeholder="用户名">
-                    </div>
-
-
-                    <!-- 密码 -->
-                    <div class="pass">
-                        <i class="pass-icon"></i>
-                        <input type="text" class="inp-pass" placeholder="密码">
-                    </div>
-
-
-                    <!-- 验证码 -->
-                    <div class="yzm">
-                        <i class="yzm-icon"></i>
-                        <input type="text" class="inp-yzm" placeholder="验证码">
-                        <span>这里放验证码</span>
-                    </div>
-
-
-                    <!-- 保存密码 -->
-                    <div class="rem_pass">
-                        <input type="checkbox" name="" id="" style="vertical-align: middle;">
-                        <span style="vertical-align: middle;">这台电脑30天内免登陆</span>
-                        <span style="float:right">忘记密码？</span>
-                    </div>
-
-                    <!-- 登录 -->
-                    <div class="sub">
-                        <input type="submit" class="login-btn">
-                    </div>
-                </form>
+    <section id="register">
+        <div class="reg_box">
+            <!-- title -->
+            <div class="reg-title">
+                <span class="reg-txt">新用户注册</span>
             </div>
-            <span class="no-user">
-                <em id="go-register">没有账号/前往注册</em>
-            </span>
+            <!-- 注册表单 -->
+            <form action="" class="reg-form">
+                <section class="form-main">
+                    <!-- 用户名 -->
+                    <div class="username item">
+                        <label for="">用户名:</label>
+                        <article class="inp">
+                            <input type="text" placeholder="请输入登陆的用户名">
+                        </article>
+                        <span class="tip">111</span>
+                    </div>
+                    <!-- 密码 -->
+                    <div class="pass item">
+                        <label for="">密码:</label>
+                        <article class="inp">
+                            <input type="text" placeholder="请输入登陆的密码">
+                        </article>
+                        <span class="tip">111</span>
+                    </div>
+                    <!-- 确认密码 -->
+                    <div class="check_pass item">
+                        <label for="">确认密码:</label>
+                        <article class="inp">
+                            <input type="text" placeholder="请确认您的密码">
+                        </article>
+                        <span class="tip">111</span>
+                    </div>
+                    <!-- 邮箱 -->
+                    <div class="email item">
+                        <label for="">邮箱:</label>
+                        <article class="inp">
+                            <input type="text" placeholder="请输入您的邮箱">
+                        </article>
+                        <span class="tip">111</span>
+                    </div>
+                    <!-- 验证码 -->
+                    <div class="yzm item">
+                        <label for="">验证码:</label>
+                        <article class="inp">
+                            <input type="text" class="inp_yzm">
+                            <div class="set_yzm">这里放验证码</div>
+                        </article>
+                        <span class="tip">111</span>
+                    </div>
+                    <!-- 我接受 -->
+                    <div class="yzm item">
+                        <label for=""></label>
+                        <article class="proto">
+                            <input type="checkbox">
+                            <span class="check_txt">
+                             我接受 <a class="blueLink" href="" target="_blank">《用户协议》</a><a class="blueLink" href="" target="_blank">《隐私权政策》</a> 及其相关的条款和条件
+                               
+                            </span>
+                        </article>
+
+                    </div>
+                    <!-- 注册提交 -->
+                    <div class="yzm item ">
+                        <label for=" "></label>
+                        <article class="inp ">
+                            <input type="submit">
+                        </article>
+
+                    </div>
+                </section>
+            </form>
         </div>
 
+    </section>
 
-    </div>
 
 
 
