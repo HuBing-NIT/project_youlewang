@@ -45,6 +45,7 @@ $sprit4:'../img/spirit_4.png'; //精灵图4
     width: 190px;
     height: 468px;
     position: absolute;
+    z-index: 3;
     background: rgba(248, 248, 248, .9);
     dt {
         position: relative;
@@ -94,6 +95,7 @@ $sp_pos:$pos1 $pos2 $pos3 $pos4 $pos5 $pos6 $pos7 $pos8 $pos9 $pos10 $pos11 $pos
 }
 
 .cate-bd .rightMenu {
+    display: none;
     overflow: hidden;
     position: absolute;
     top: 0;
@@ -172,5 +174,23 @@ $sp_pos:$pos1 $pos2 $pos3 $pos4 $pos5 $pos6 $pos7 $pos8 $pos9 $pos10 $pos11 $pos
         overflow: hidden;
         text-align: center;
         color: #fff;
+    }
+}
+
+.menu_nav_right li:hover {
+    color: #fff;
+    background-color: #6c0709;
+}
+
+dt.hover {
+    border-right: 0;
+    background: #fff;
+    padding: 6px 5px 6px 15px;
+    width: 170px;
+    box-shadow: -1px 1px 1px 0;
+    z-index: 4;
+    cursor: pointer;
+    i {
+        transform: rotate(360deg);
     }
 }

@@ -1,11 +1,38 @@
 #lunbo {
     height: 467px;
+    position: relative;
+    z-index: 1;
     li {
         height: 467px;
         text-align: center;
+        // opacity: 0;
         img {
             height: 467px;
             width: 1200px;
         }
+    }
+}
+
+.lunbo-index {
+    position: absolute;
+    z-index: 3;
+    height: 24px;
+    right: 35%;
+    bottom: 15px;
+    // background: red;
+    span {
+        display: block;
+        background: #ffffff;
+        float: left;
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        line-height: 16px;
+        text-align: center;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    .active {
+        background-color: red;
     }
 }

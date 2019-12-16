@@ -16,11 +16,12 @@ $sprit4:'../img/spirit_4.png'; //精灵图4
     position: fixed;
     top: 0;
     right: 0;
+    z-index: 100;
     .fix_tab_top {
         // 右侧头部
         position: absolute;
         top: 40px;
-        z-index: 1;
+        z-index: 100;
         background-color: red;
         .jui-ubar-tab-item {
             background-position: 8px 0;
@@ -31,7 +32,7 @@ $sprit4:'../img/spirit_4.png'; //精灵图4
     .fix_tab_middle {
         position: absolute;
         top: 50%;
-        z-index: 2;
+        z-index: 100;
         margin-top: -150px;
         background-color: red;
     }
@@ -73,6 +74,7 @@ $sprit4:'../img/spirit_4.png'; //精灵图4
     position: fixed;
     left: 110px;
     bottom: 26px;
+    z-index: 100;
     a {
         display: block;
         width: 32px;

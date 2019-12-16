@@ -164,7 +164,7 @@ function bufferMove(obj, json, fn) {
                 currentValue = parseInt(getStyle(obj, attr));
             }
             //2.求速度
-            speed = (json[attr] - currentValue) / 5; //10：运动因子
+            speed = (json[attr] - currentValue) / 100; //10：运动因子
             speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
             //3.判断运动开启和停止
             if (currentValue !== json[attr]) { //没到目标继续运动
@@ -187,4 +187,4 @@ function bufferMove(obj, json, fn) {
 
 
 
-export { $, rannum, jstool, ajax }
+export { $, rannum, jstool, ajax, bufferMove }

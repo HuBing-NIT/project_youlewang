@@ -8,6 +8,9 @@
         // display: inline-block;
         float: left;
     }
+    img:hover {
+        opacity: 0.8;
+    }
 }
 
 @for $num from 2 to 4 {

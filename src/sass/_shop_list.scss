@@ -91,6 +91,7 @@ $color:$color1 $color2 $color3 $color4 $color5;
         }
         a:hover {
             cursor: pointer;
+            color: #c52f16;
         }
     }
 }
@@ -103,34 +104,44 @@ $color:$color1 $color2 $color3 $color4 $color5;
         width: 270px;
         height: 550px;
         float: left;
+        img:hover {
+            opacity: 0.8;
+            cursor: pointer;
+        }
     }
     .col_main {
         width: 930px;
         height: 550px;
         float: left;
-        li {
-            background: white;
-            width: 202px;
-            height: 250px;
-            float: left;
-            padding: 10px;
-            margin: 0 0 10px 10px;
-            a {}
-            p:nth-child(2) {
-                width: 200px;
-                padding: 0 5px;
-                margin-top: 10px;
-                font-size: 14px;
-                font-weight: bold;
-                @include ellipse(200px, 17px)
-            }
-            p:nth-child(3) {
-                margin-top: 8px;
-                line-height: 18px;
-                text-align: center;
-                font-size: 16px;
-                color: #c52e13;
-            }
+        overflow: hidden;
+        li:hover {
+            box-shadow: 0 16px 30px -14px rgba(0, 36, 100, 0.3);
+            transition: box-shadow .5s;
+            top: -2px
+        }
+    }
+    li {
+        position: relative;
+        background: white;
+        width: 202px;
+        height: 250px;
+        float: left;
+        padding: 10px;
+        margin: 0 0 10px 10px;
+        p:nth-child(2) {
+            width: 200px;
+            padding: 0 5px;
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            @include ellipse(200px, 17px)
+        }
+        p:nth-child(3) {
+            margin-top: 8px;
+            line-height: 18px;
+            text-align: center;
+            font-size: 16px;
+            color: #c52e13;
         }
     }
 }

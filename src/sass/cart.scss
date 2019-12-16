@@ -1,0 +1,92 @@
+@charset "utf-8";
+// 第二排logo
+#search {
+    height: 99px;
+    border-bottom: solid 4px #a71b1c;
+    .search {
+        height: 80px;
+        width: 1200px;
+        padding: 12px 0 7px 0;
+        margin: 0 auto;
+    }
+}
+
+.head-logo {
+    height: 75px;
+    float: left;
+    background: url(http://i0.ulecdn.com/ule/header/images/logo.png) no-repeat left bottom;
+    a {
+        width: 75px;
+        text-indent: -10000px;
+        overflow: hidden;
+        display: block;
+        float: left;
+        height: 75px;
+    }
+}
+
+// 空购物车 cart main 样式
+.empty_cart {
+    padding: 20px 0;
+    background-color: #f6f6f6;
+}
+
+.empty_cart .mycart {
+    width: 910px;
+    padding: 0 20px;
+    background-color: #fff;
+    margin: 0 auto;
+    .cart-title {
+        padding-bottom: 5px;
+        background: none;
+        border-bottom: dotted 1px #ccc;
+        height: 36px;
+        line-height: 36px;
+        padding-top: 10px;
+        h3 {
+            float: left;
+            font-size: 16px;
+            color: #000;
+        }
+        p {
+            float: right;
+        }
+    }
+    .cart-empty {
+        height: 150px;
+        padding: 50px 0 0 435px;
+        background: url(../img/bg_empty_cart.png) no-repeat 270px center;
+        p {
+            line-height: 34px;
+            font-size: 14px;
+            font-family: "microsoft yahei";
+            color: #000;
+        }
+        .btn-cart-tologin {
+            cursor: pointer;
+            display: inline-block;
+            margin-right: 5px;
+            width: 116px;
+            height: 28px;
+            line-height: 28px;
+            margin-top: 10px;
+            font-family: "microsoft yahei";
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            background-color: #d10208;
+            border: solid 1px #a71226;
+            border-radius: 3px;
+        }
+        .btn-cart-toshop {
+            color: #06c;
+            display: inline-block;
+            height: 30px;
+            line-height: 30px;
+            margin-top: 10px;
+        }
+    }
+}
+
+// 有商品的购物车样式

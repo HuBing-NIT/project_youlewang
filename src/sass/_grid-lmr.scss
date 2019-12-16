@@ -35,13 +35,23 @@ $sprit4:'../img/spirit_4.png'; //精灵图4
         height: 358px;
         margin-top: 20px;
         background: white;
+        position: relative;
+        overflow: hidden;
         .slide-index {
             height: 53px;
             width: 100%;
+            overflow: hidden;
+            // position: absolute;
         }
         .slide-items {
             height: 1425px;
-            // background: green;
+            position: relative;
+            position: relative;
+            // top: 53px;
+            overflow: hidden;
+        }
+        #slide-items {
+            position: absolute;
         }
     }
 }
@@ -57,6 +67,7 @@ $sprit4:'../img/spirit_4.png'; //精灵图4
     font-size: 16px;
     cursor: pointer;
     font-weight: normal;
+    overflow: hidden;
     i {
         display: inline-block;
         height: 25px;
