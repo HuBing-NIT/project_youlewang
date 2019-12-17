@@ -7,7 +7,6 @@ import { $, rannum, jstool, ajax, bufferMove } from './toolmodule.js'
 
 
 class Lunbo {
-
     constructor() {
         // 元素节点获取
         this.lb_pic = $('#lunbo li', 'all');
@@ -181,6 +180,46 @@ class special_eff {
 
 
 }
+
+// function lazy() {
+//     const imgs = document.querySelectorAll('img');
+//     let begin = 0;
+
+//     function lazyload() {
+//         for (let index = begin; index < imgs.length; index++) {
+//             const img = imgs[index];
+//             console.log(document.documentElement.clientHeight);
+//             console.log(document.documentElement.scrollTop)
+//             console.log(img.offsetTop)
+//             if ((img.offsetTop) + 10 > document.documentElement.clientHeight + document.documentElement.scrollTop) {
+//                 console.log("scroll" + index + "到了")
+//                 begin = index; //不去遍历已经加载了得图片
+//                 img.src = img.getAttribute("data-src")
+//                     // img.src = img.getAttribute("");
+//                 break;
+//             }
+//         }
+//         console.log(1);
+//     }
+//     lazyload() //渲染首屏，先执行一次
+//     window.onscroll = lazyload;
+
+//     function throttle(lazyTime, Fuc) {
+//         var lastTime = null //记录上次时间
+//         return function() {
+//             var currentTime = new Date().getTime();
+//             if (!lastTime) { //初始化时间
+//                 lastTime = currentTime;
+//             }
+//             if (lastTime + lazyTime < currentTime) {
+//                 Fuc();
+//                 lastTime = currentTime;
+//             }
+//         }
+//     }
+//     window.onscroll = throttle(50, lazyload) //事件回调是个闭包
+
+// }
 
 
 

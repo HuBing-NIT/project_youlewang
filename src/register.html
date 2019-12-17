@@ -86,51 +86,52 @@
                 <span class="reg-txt">新用户注册</span>
             </div>
             <!-- 注册表单 -->
-            <form action="" class="reg-form">
+            <form action="../php/register.php" method="POST" class="reg-form">
                 <section class="form-main">
                     <!-- 用户名 -->
-                    <div class="username item">
+                    <div class="username item iteminput">
                         <label for="">用户名:</label>
                         <article class="inp">
-                            <input type="text" placeholder="请输入登陆的用户名">
+                            <input name="user" type="text" placeholder="请输入登陆的用户名">
                         </article>
-                        <span class="tip">111</span>
+
+                        <span class="tip"></span>
                     </div>
                     <!-- 密码 -->
-                    <div class="pass item">
+                    <div class="pass item iteminput">
                         <label for="">密码:</label>
                         <article class="inp">
-                            <input type="text" placeholder="请输入登陆的密码">
+                            <input name="pass" type="text" placeholder="请输入登陆的密码">
                         </article>
-                        <span class="tip">111</span>
+                        <span class="tip"></span>
                     </div>
                     <!-- 确认密码 -->
-                    <div class="check_pass item">
+                    <div class="check_pass item iteminput">
                         <label for="">确认密码:</label>
                         <article class="inp">
                             <input type="text" placeholder="请确认您的密码">
                         </article>
-                        <span class="tip">111</span>
+                        <span class="tip"></span>
                     </div>
                     <!-- 邮箱 -->
-                    <div class="email item">
+                    <div class="email item iteminput">
                         <label for="">邮箱:</label>
                         <article class="inp">
-                            <input type="text" placeholder="请输入您的邮箱">
+                            <input name="email" type="text" placeholder="请输入您的邮箱">
                         </article>
-                        <span class="tip">111</span>
+                        <span class="tip"></span>
                     </div>
                     <!-- 验证码 -->
-                    <div class="yzm item">
+                    <div class="yzm item iteminput">
                         <label for="">验证码:</label>
                         <article class="inp">
                             <input type="text" class="inp_yzm">
                             <div class="set_yzm">这里放验证码</div>
                         </article>
-                        <span class="tip">111</span>
+                        <span class="tip"></span>
                     </div>
                     <!-- 我接受 -->
-                    <div class="yzm item">
+                    <div class="yzm item iteminput">
                         <label for=""></label>
                         <article class="proto">
                             <input type="checkbox">
@@ -145,7 +146,7 @@
                     <div class="yzm item ">
                         <label for=" "></label>
                         <article class="inp ">
-                            <input type="submit">
+                            <input name="submit" type="submit" class="sub">
                         </article>
 
                     </div>
@@ -196,6 +197,7 @@
                         <p data-uspm="143 "><a target="_blank " rel="nofollow " href="//help.ule.com/helpcenter/74/14.html ">海外购物配送</a><a target="_blank " rel="nofollow " href="//help.ule.com/helpcenter/65/5.html ">签收拒收规则</a><a target="_blank
                                 " rel="nofollow " href="//help.ule.com/helpcenter/64/4.html ">配送时间/范围/运费</a></p>
                     </li>
+
                     <li class="i4 ">
                         <h4>售后服务</h4>
                         <p data-uspm="144 "><a target="_blank " rel="nofollow " href="//help.ule.com/helpcenter/66/20.html ">退换货规则</a><a target="_blank " rel="nofollow " href="//help.ule.com/helpcenter/87/27.html ">退款说明</a><a target="_blank " rel="nofollow
@@ -235,7 +237,7 @@
             </div>
         </div>
     </div>
-    <script src="script/register.js"></script>
+    <script src="script/register.js" type="module"></script>
 </body>
 
 </html>

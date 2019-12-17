@@ -11,6 +11,22 @@ function $(selector, all) {
 }
 
 
+
+// 生成验证码
+function yzm() {
+
+    var str = '';
+    var arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    for (var i = 65; i <= 90; i++) {
+        arr.push(String.fromCharCode(i));
+    }
+    for (var i = 0; i < 5; i++) {
+        str += arr[Math.round(Math.random() * (arr.length - 1))];
+    }
+
+    return str;
+}
+
 // 随机数
 function rannum(min, max) {
     // min-max区间的随机整数
@@ -187,4 +203,4 @@ function bufferMove(obj, json, fn) {
 
 
 
-export { $, rannum, jstool, ajax, bufferMove }
+export { $, rannum, jstool, ajax, bufferMove, yzm }

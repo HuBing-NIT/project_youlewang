@@ -1,6 +1,6 @@
 // 轮播图
-import { Lunbo, Tab, special_eff } from './effect.js'
-import {} from './index_render.js'
+import { Lunbo, Tab, special_eff } from './index_effect_mod.js'
+import {} from './index_render_mod.js'
 
 
 new Lunbo().init();

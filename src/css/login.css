@@ -55,6 +55,14 @@
 .from-input .yzm {
   height: 62px;
   position: relative; }
+  .from-input .yzm .set_yzm {
+    width: 70px;
+    margin-left: 20px;
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    cursor: pointer; }
 .from-input .rem_pass {
   padding: 0 0 10px 12px;
   position: relative;
@@ -63,15 +71,31 @@
 .from-input .inp-user,
 .from-input .inp-pass,
 .from-input .inp-yzm {
-  width: 277px;
+  width: 270px;
   height: 18px;
   line-height: 18px;
-  padding: 10px 0 10px 23px;
+  padding: 10px 0 10px 30px;
   border: 1px solid #cacaca;
   font-size: 14px;
   margin: 0 0 0 15px; }
+.from-input .error {
+  border: 1px solid red; }
 .from-input .inp-yzm {
   width: 140px; }
+.from-input .error-tips {
+  display: none;
+  float: left;
+  background: url(../img/login_icons.png) no-repeat;
+  background-position: 0 -32px;
+  line-height: 16px;
+  text-indent: 20px;
+  width: 294px;
+  margin: 2px 0 4px 16px;
+  background-color: #fff;
+  color: #eb3937; }
+  .from-input .error-tips em {
+    font-weight: 100;
+    font-family: Tahoma, Arial, Verdana, Simsun; }
 .from-input .login-btn {
   margin-left: 15px;
   background: none;
@@ -83,7 +107,8 @@
   line-height: 36px;
   text-align: center;
   border-radius: 3px;
-  font-size: 16px; }
+  font-size: 16px;
+  cursor: pointer; }
 
 .no-user {
   padding: 10px 14px 0 0;

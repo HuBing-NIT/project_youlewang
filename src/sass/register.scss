@@ -93,13 +93,23 @@
             .inp_yzm {
                 width: 120px;
             }
+            .sub {
+                cursor: pointer;
+                background: skyblue;
+                border-radius: 4px;
+            }
             .set_yzm {
-                width: 120px;
+                width: 60px;
                 display: inline-block;
+                font-size: 14px;
                 position: absolute;
-                right: 10px;
+                right: 70px;
                 height: 38px;
                 line-height: 38px;
+                text-align: center;
+            }
+            .set_yzm:hover {
+                cursor: pointer;
             }
         }
         .tip {
@@ -110,7 +120,21 @@
             font-size: 14px;
             line-height: 40px;
             color: #c52e15;
-            background: url(https://i0.ulecdn.com/i/login/2016/0808/icon.jpg) no-repeat 1000px 0px;
+            background: url(../img/icon.jpg) no-repeat 1000px 0px;
+        }
+        .success {
+            background-position: -2px -29px;
+            color: #666;
+            padding-left: 20px;
+        }
+        .error {
+            padding-left: 20px;
+            background-position: -2px -64px;
+        }
+        .wram {
+            padding-left: 20px;
+            background-position: -2px -100px;
+            color: #333;
         }
         // 我接受
         .check_txt {

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/footer.css">
+    <script src="script/login.js" type="module"></script>
 </head>
 
 <body>
@@ -98,39 +99,49 @@
         <div class="login-from">
             <span class="title">登录</span>
             <div class="login-input">
-                <form action="" class="from-input">
+                <form class="from-input">
                     <!-- 用户名 -->
                     <div class="username">
                         <i class="user-icon"></i>
-                        <input type="text" class="inp-user" placeholder="用户名">
+                        <input type="text" class="inp-user inp_yz" placeholder="用户名">
+                        <span class="error-tips"> 				
+                            <em>用户名或密码错误，请重新输入!</em>
+                        </span>
                     </div>
 
 
                     <!-- 密码 -->
                     <div class="pass">
                         <i class="pass-icon"></i>
-                        <input type="text" class="inp-pass" placeholder="密码">
+                        <input type="text" class="inp-pass inp_yz" placeholder="密码">
+                        <span class="error-tips"> 				
+                            <em></em>
+                        </span>
                     </div>
 
 
                     <!-- 验证码 -->
                     <div class="yzm">
                         <i class="yzm-icon"></i>
-                        <input type="text" class="inp-yzm" placeholder="验证码">
-                        <span>这里放验证码</span>
+                        <input type="text" class="inp-yzm inp_yz" placeholder="验证码">
+                        <span class="set_yzm"></span>
+                        <span class="error-tips"> 				
+                            <em>验证码有误</em>
+                        </span>
                     </div>
 
 
                     <!-- 保存密码 -->
                     <div class="rem_pass">
                         <input type="checkbox" name="" id="" style="vertical-align: middle;">
-                        <span style="vertical-align: middle;">这台电脑30天内免登陆</span>
+                        <span style="vertical-align: middle;">记住用户名/密码</span>
                         <span style="float:right">忘记密码？</span>
                     </div>
 
                     <!-- 登录 -->
                     <div class="sub">
-                        <input type="submit" class="login-btn">
+                        <button type="button" class="login-btn">登录</button>
+                        <!-- <input type="submit"> -->
                     </div>
                 </form>
             </div>
