@@ -64,7 +64,7 @@ $sprit4:'../img/spirit_4.png'; //精灵图4
                 width: 16px;
                 height: 16px;
                 margin-right: 10px;
-                transform: all .5s linear;
+                transition: all .5s linear;
                 overflow: hidden;
                 @include spirit();
             }

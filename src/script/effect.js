@@ -1,6 +1,8 @@
 // 引入工具模块
 import { $, rannum, jstool, ajax, bufferMove } from './toolmodule.js'
 
+
+// 这里放主页的效果
 // 以下是轮播图的代码
 
 
@@ -13,15 +15,19 @@ class Lunbo {
 
         this.index = 0;
         this.timer = null;
+
     }
     init() {
-        // 小圆点的点击切换
+        // 小圆点的切换
         let _this = this;
         for (let i = 0; i < this.lb_index.length; i++) {
             this.lb_index[i].index = i;
-            this.lb_index[i].onclick = function() {
-                _this.index = i;
-                _this.click_tab();
+            this.lb_index[i].onmouseover = function() {
+                setTimeout(function() {
+                    _this.index = i;
+                    _this.click_tab();
+                }, 50)
+
             }
 
             // 鼠标移入取消自动轮播
@@ -108,25 +114,74 @@ class Tab {
     }
 }
 
-function menu_operate() {
-    let oDt = $('dt', 'all');
-    let OrightM = $('dd', 'all');
-    for (let i = 0; i < oDt.length; i++) {
-        oDt[i].onmouseover = function() {
 
-            this.className = 'hover';
-            OrightM[i].style.display = 'block';
-        }
-        oDt[i].onmouseout = function() {
-            this.className = '';
-            OrightM[i].style.display = 'none';
-        }
+// 以下是页面的零碎效果
+class special_eff {
 
-        // 明天问老师
-        // OrightM[i].onmouseout = function() {
-        //     this.style.display = 'none';
-        // }
+    constructor() {
+        this.oDt = $('dt', 'all');
+        this.OrightM = $('dd', 'all');
+        this.Ohead_drop = $('.dropdown', 'all');
+        this.Ohead_dropul = $('.dropdown ul', 'all');
+
     }
+
+
+
+    init() {
+        let _this = this
+        console.log(this.Ohead_drop);
+        console.log(this.Ohead_dropul);
+
+        // menu显示隐藏
+        this.menu_op();
+
+        // 头部下拉显示隐藏
+        this.header_op();
+
+
+
+    }
+
+    menu_op() {
+        let _this = this;
+        for (let i = 0; i < this.oDt.length; i++) {
+            // 鼠标移入显示菜单
+            this.oDt[i].onmouseover = function() {
+                this.className = 'hover';
+                _this.OrightM[i].style.display = 'block';
+            }
+
+            // 鼠标移出消失菜单
+            this.oDt[i].onmouseout = function() {
+                this.className = '';
+                _this.OrightM[i].style.display = 'none';
+            }
+        }
+    }
+
+
+    header_op() {
+        let _this = this;
+        for (let i = 0; i < this.Ohead_drop.length; i++) {
+            console.log(this.Ohead_drop);
+            this.Ohead_drop[i].onmouseover = function() {
+                console.log(1);
+                _this.Ohead_dropul[i].style.display = 'block';
+            }
+
+
+            this.Ohead_drop[i].onmouseout = function() {
+                // this.lastChlid.style.display = 'none';
+                _this.Ohead_dropul[i].style.display = 'none'
+            }
+        }
+    }
+
+
+
 }
 
-export { Lunbo, Tab, menu_operate }
+
+
+export { Lunbo, Tab, special_eff }

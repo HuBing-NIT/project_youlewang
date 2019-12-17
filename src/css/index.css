@@ -172,7 +172,7 @@
         width: 16px;
         height: 16px;
         margin-right: 10px;
-        transform: all .5s linear;
+        transition: all .5s linear;
         overflow: hidden;
         background-image: url(../img/spirit_1.png);
         background-repeat: no-repeat; }
