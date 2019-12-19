@@ -9,7 +9,7 @@ header('Access-Control-Allow-Method:POST,GET');
 
 if (isset($_POST['user']) && isset($_POST['pass'])){
     $user=$_POST['user'];
-    $pass=sha1($_POST['pass']);
+    $pass=sha1($_POST['pass']);//二次加密
     $result = $conn->query("select * from user_information where user='$user'");
 
     $arr=array();
@@ -18,7 +18,7 @@ if (isset($_POST['user']) && isset($_POST['pass'])){
         $arr[$i]=$result->fetch_assoc();
     }
 
-    $datapass= $arr[0]['pass'];
+    $datapass=sha1($arr[0]['pass']);//2次加密
     // echo $datapass;
     if($result->num_rows>0){
         if($datapass==$pass){//如果密码匹配

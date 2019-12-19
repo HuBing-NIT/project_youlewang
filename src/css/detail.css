@@ -1,0 +1,30 @@
+#search {
+  height: 99px;
+  border-bottom: solid 4px #a71b1c; }
+  #search .search {
+    height: 80px;
+    width: 1200px;
+    padding: 12px 0 7px 0;
+    margin: 0 auto; }
+
+.head-logo {
+  height: 75px;
+  float: left;
+  background: url(http://i0.ulecdn.com/ule/header/images/logo.png) no-repeat left bottom; }
+  .head-logo a {
+    width: 75px;
+    text-indent: -10000px;
+    overflow: hidden;
+    display: block;
+    float: left;
+    height: 75px; }
+
+.wrap {
+  margin: 0 auto;
+  background: red; }
+
+#shop_detail {
+  width: 1200px;
+  padding-top: 10px; }
+
+/*# sourceMappingURL=detail.css.map */

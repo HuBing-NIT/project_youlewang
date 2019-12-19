@@ -202,5 +202,44 @@ function bufferMove(obj, json, fn) {
 
 
 
+// 添加类
+function addClass(obj, className) {
+    //没有class属性
+    if (obj.className == "") {
+        obj.className = className;
+    } else { //有class属性
+        var index = classIndexOf(obj, className);
+        //如果原来没有这个新加的class
+        if (index == -1) {
+            obj.className += " " + className;
+        }
+    }
+}
 
-export { $, rannum, jstool, ajax, bufferMove, yzm }
+//检验是否包含有某一个class
+function classIndexOf(obj, name) {
+    var arrClassName = obj.className.split(" "); //根据空格转数组
+    for (var i = 0; i < arrClassName.length; i++) {
+        if (arrClassName[i] == name) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+function removeClass(obj, className) {
+    //
+    if (obj.className != "") {
+        var arrClassName = obj.className.split(" ");
+        var index = classIndexOf(obj, className);
+
+        if (index != -1) { //存在
+            arrClassName.splice(index, 1); //删掉
+        }
+        obj.className = arrClassName.join(" "); //转回字符串赋值
+    }
+}
+
+
+
+export { $, rannum, jstool, ajax, bufferMove, yzm, addClass, removeClass };

@@ -1,13 +1,12 @@
-import { $, rannum, jstool, ajax, bufferMove } from './toolmodule.js'
+import { $, rannum, jstool, ajax, bufferMove } from './module_tool.js'
 
 
 //5块区域渲染
 ajax({
-
     type: 'get',
     url: 'http://10.31.161.142/project_youlewang/php/index_render.php',
     dataType: 'json'
-}).then(function(data) {;
+}).then((data) => {
 
     var data = data;
     // console.log(data.d1)
@@ -23,7 +22,7 @@ ajax({
             html += `
             <li>
                 <a href="">
-                    <img src="${d[j].shop_src}" alt="" data-src='${d[j].shop_src}'>
+                    <img src="img/loading.gif" alt="" data-src='${d[j].shop_src}'>
                 </a>
                 <p>
                   ${d[j].shop_title}  
@@ -37,4 +36,4 @@ ajax({
     }
 
 
-})
+});

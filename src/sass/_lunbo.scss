@@ -1,14 +1,46 @@
+// .lunbo {
+//     width: 1200px;
+//     height: 467px;
+//     margin: 0 auto;
+//     position: relative;
+// }
 #lunbo {
     height: 467px;
     position: relative;
     z-index: 1;
-    li {
+    width: 100%;
+    >li {
+        position: absolute;
+        width: 100%;
         height: 467px;
-        text-align: center;
-        // opacity: 0;
-        img {
+        opacity: 0;
+    }
+    .lb_box {
+        width: 1200px;
+        height: 467px;
+        margin: 0 auto;
+        position: relative;
+        >img {
             height: 467px;
             width: 1200px;
+        }
+        .lb_spic {
+            float: right;
+            margin-right: 0px;
+            width: 265px;
+            margin-top: -465px;
+            position: relative;
+            z-index: 1;
+            a {
+                width: 100%;
+                height: 143px;
+                display: block;
+                margin-bottom: 9px;
+                margin-top: 7px;
+                text-align: center;
+                background: rgba(255, 255, 255, 0.9);
+            }
+            img {}
         }
     }
 }

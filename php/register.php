@@ -8,7 +8,7 @@ header('Access-Control-Allow-Method:POST,GET');
 //将注册信息写入数据库
 if(isset($_POST['submit'])){    
     $user=$_POST['user'];
-    $pass=sha1($_POST['pass']);
+    $pass=sha1($_POST['pass']);//一次加密存入数据库
     $email=$_POST['email'];
     $conn->query("insert user_information values(null,'$user','$pass','$email',NOW())");
 }

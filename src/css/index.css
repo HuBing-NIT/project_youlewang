@@ -38,21 +38,55 @@
   left: 110px;
   bottom: 26px;
   z-index: 100; }
-  #louti a {
+  #louti div {
     display: block;
     width: 32px;
     height: 32px;
     text-align: center;
     border-bottom: dotted 1px #ccc;
     padding: 10px 0; }
-    #louti a span {
+    #louti div span {
       line-height: 14px;
       height: 31px;
       color: #999;
       font-family: verdana;
       background: #f3f4f6;
       border-radius: 4px;
-      font-weight: bold; }
+      font-weight: bold;
+      display: block; }
+    #louti div label {
+      display: none;
+      font-size: 12px;
+      line-height: 14px;
+      height: 28px;
+      padding: 2px 0;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 4px; }
+  #louti div.back_top {
+    background-position: center center;
+    background: url(http://i0.ulecdn.com/ule/www/hp/2014/0710/images/returntop2.png);
+    margin-top: 10px;
+    height: 40px;
+    background-repeat: no-repeat;
+    border-bottom: 0;
+    margin-left: 4px;
+    cursor: pointer; }
+
+.c-1 {
+  background: #ff7b30; }
+
+.c-2 {
+  background: #1bb145; }
+
+.c-3 {
+  background: #2289ff; }
+
+.c-4 {
+  background: #000; }
+
+.c-5 {
+  background: #ff2f91; }
 
 #search {
   height: 99px; }
@@ -302,13 +336,36 @@ dt.hover {
 #lunbo {
   height: 467px;
   position: relative;
-  z-index: 1; }
-  #lunbo li {
+  z-index: 1;
+  width: 100%; }
+  #lunbo > li {
+    position: absolute;
+    width: 100%;
     height: 467px;
-    text-align: center; }
-    #lunbo li img {
+    opacity: 0; }
+  #lunbo .lb_box {
+    width: 1200px;
+    height: 467px;
+    margin: 0 auto;
+    position: relative; }
+    #lunbo .lb_box > img {
       height: 467px;
       width: 1200px; }
+    #lunbo .lb_box .lb_spic {
+      float: right;
+      margin-right: 0px;
+      width: 265px;
+      margin-top: -465px;
+      position: relative;
+      z-index: 1; }
+      #lunbo .lb_box .lb_spic a {
+        width: 100%;
+        height: 143px;
+        display: block;
+        margin-bottom: 9px;
+        margin-top: 7px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.9); }
 
 .lunbo-index {
   position: absolute;
@@ -545,7 +602,7 @@ dt.hover {
     height: 250px;
     float: left;
     padding: 10px;
-    margin: 0 0 10px 10px; }
+    margin: 0 0 5px 10px; }
     .list_item li p:nth-child(2) {
       width: 200px;
       padding: 0 5px;

@@ -75,7 +75,7 @@ $sprit4:'../img/spirit_4.png'; //精灵图4
     left: 110px;
     bottom: 26px;
     z-index: 100;
-    a {
+    div {
         display: block;
         width: 32px;
         height: 32px;
@@ -90,6 +90,42 @@ $sprit4:'../img/spirit_4.png'; //精灵图4
             background: #f3f4f6;
             border-radius: 4px;
             font-weight: bold;
+            display: block;
         }
+        label {
+            display: none;
+            font-size: 12px;
+            line-height: 14px;
+            height: 28px;
+            padding: 2px 0;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    }
+    div.back_top {
+        background-position: center center;
+        background: url(http://i0.ulecdn.com/ule/www/hp/2014/0710/images/returntop2.png);
+        margin-top: 10px;
+        height: 40px;
+        background-repeat: no-repeat;
+        border-bottom: 0;
+        margin-left: 4px;
+        cursor: pointer;
+    }
+}
+
+$color1:#ff7b30;
+$color2:#1bb145;
+$color3:#2289ff;
+$color4:#000;
+$color5:#ff2f91;
+$color:$color1 $color2 $color3 $color4 $color5;
+@for $i from 1 to length($color)+1 {
+    // .menu_nav_left .cate-bd dt .a#{$i} i {
+    //     background-position: nth($sp_pos, $i);
+    // }
+    .c-#{$i} {
+        background: nth($color, $i);
     }
 }
