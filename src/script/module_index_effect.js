@@ -22,16 +22,16 @@ class Lunbo {
         let _this = this;
         for (let i = 0; i < this.lb_index.length; i++) {
             this.lb_index[i].index = i;
-            this.lb_index[i].onmouseover = function() {
+            this.lb_index[i].onmouseover = () => {
                 //取消自动轮播
                 clearInterval(_this.timer)
                     //透明淡入淡出
-                _this.indexh = i;
-                _this.click_tab();
-                _this.indexq = i;
+                this.indexh = i;
+                this.click_tab();
+                this.indexq = i;
             }
-            this.lb_index[i].onmouseout = function() {
-                _this.play_auto();
+            this.lb_index[i].onmouseout = () => {
+                this.play_auto();
             }
 
             // 鼠标移入取消自动轮播
@@ -127,15 +127,15 @@ class Tab {
         let _this = this;
         for (let i = 0; i < this.slide_index.length; i++) {
             // 鼠标移入事件
-            this.slide_index[i].onmouseover = function() {
-                let top = -(_this.ul_len * _this.slide_index[i].getAttribute('index'));
+            this.slide_index[i].onmouseover = () => {
+                let top = -(this.ul_len * this.slide_index[i].getAttribute('index'));
                 // console.log(top)
                 // 清空acitve样式
-                for (let j = 0; j < _this.slide_index.length; j++) {
-                    _this.slide_index[j].className = '';
+                for (let j = 0; j < this.slide_index.length; j++) {
+                    this.slide_index[j].className = '';
                 }
 
-                bufferMove(_this.slide_item, {
+                bufferMove(this.slide_item, {
                     top: top
                 })
 
@@ -191,17 +191,17 @@ class stairs {
             // 每一块的offsettop
             this.arr.push(this.section[i].offsetTop);
             // 移入
-            this.louceng[i].onmouseover = function() {
+            this.louceng[i].onmouseover = () => {
 
-                _this.louceng_tabq[i].style.display = 'none';
-                _this.louceng_tabh[i].style.display = 'block';
+                this.louceng_tabq[i].style.display = 'none';
+                this.louceng_tabh[i].style.display = 'block';
             }
 
             //移出
-            this.louceng[i].onmouseout = function() {
-                if (i != _this.index) {
-                    _this.louceng_tabq[i].style.display = 'block';
-                    _this.louceng_tabh[i].style.display = 'none';
+            this.louceng[i].onmouseout = () => {
+                if (i != this.index) {
+                    this.louceng_tabq[i].style.display = 'block';
+                    this.louceng_tabh[i].style.display = 'none';
                 }
             }
 

@@ -1,0 +1,1 @@
+"use strict";var _register_mod=require("./register_mod.js");(new _register_mod.register).init();

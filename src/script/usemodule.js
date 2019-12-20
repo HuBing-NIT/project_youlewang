@@ -5,6 +5,8 @@ import { Lunbo, Tab, special_eff, stairs } from './module_index_effect.js' //主
 import {} from './module_index_render.js' //主页渲染
 import { Login } from './module_login.js' //登录模块
 import { register } from './module_register.js' //注册模块
+import { detail_render } from './module_detail_render.js'
+import { detail_effect } from './module_detail_effect.js'
 
 // 主页
 if ($('#index_mod')) {
@@ -29,4 +31,11 @@ if ($('#login_mod')) {
 // 注册
 if ($('#register_mod')) {
     new register().init();
+}
+
+
+// 详情
+if ($('#detail_mod')) {
+    new detail_render().init();
+    new detail_effect().init();
 }

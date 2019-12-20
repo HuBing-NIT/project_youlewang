@@ -109,7 +109,7 @@ gulp.task("browserify", function() {
 gulp.task('default', function() {
     //文件路径
     //watch:监听
-    watch(['src/font/*', 'src/*.html', 'src/sass/*.scss', 'src/js/*.js', 'src/img/*.png'],
+    watch(['src/font/*', 'src/*.html', 'src/sass/*.scss', 'src/script/*.js', 'src/img/*.png'],
         gulp.parallel('uglifyhtml', 'compilesass', 'uglifyjs', 'runimg', 'browserify'));
     //gulp.parallel():让任务并行。
 });

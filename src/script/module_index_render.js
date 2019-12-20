@@ -21,7 +21,7 @@ ajax({
             // console.log(d[j].shop_src)
             html += `
             <li>
-                <a href="">
+            <a href="details.html?sid=${d[j].shop_id}">
                     <img src="img/loading.gif" alt="" data-src='${d[j].shop_src}'>
                 </a>
                 <p>

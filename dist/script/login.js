@@ -1,0 +1,1 @@
+"use strict";var _login_mod=require("./login_mod.js");(new _login_mod.Login).init();

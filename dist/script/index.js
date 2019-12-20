@@ -1,0 +1,1 @@
+"use strict";var _index_effect_mod=require("./index_effect_mod.js");require("./index_render_mod.js"),(new _index_effect_mod.Lunbo).init(),(new _index_effect_mod.Tab).init(),(new _index_effect_mod.special_eff).init(),(new _index_effect_mod.stairs).init();
