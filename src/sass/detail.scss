@@ -14,9 +14,9 @@
 .head-logo {
     height: 75px;
     float: left;
-    background: url(http://i0.ulecdn.com/ule/header/images/logo.png) no-repeat left bottom;
+    background: url(http://i0.ulecdn.com/youxnp/i/global/2014/0612/head_logo.gif?v=3) no-repeat left bottom;
     a {
-        width: 75px;
+        width: 200px;
         text-indent: -10000px;
         overflow: hidden;
         display: block;
@@ -25,12 +25,356 @@
     }
 }
 
+// 左侧放大镜
 .wrap {
-    margin: 0 auto;
-    background: red;
+    float: left;
+    position: relative;
 }
 
-#shop_detail {
+#spic {
+    width: 400px;
+    height: 400px;
+    float: left;
+    position: relative;
+}
+
+#spic img {
+    width: 400px;
+    height: 400px;
+}
+
+#sf {
+    width: 50px;
+    height: 50px;
+    background: orange;
+    opacity: 0.3;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    visibility: hidden;
+}
+
+#bf {
+    width: 400px;
+    height: 500px;
+    border: 1px solid #000;
+    overflow: hidden;
+    position: absolute;
+    left: 410px;
+    visibility: hidden;
+    z-index: 100;
+}
+
+#bf img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 800px;
+    height: 800px;
+}
+
+#ulist {
+    position: absolute;
+    left: 0px;
+    top: 430px;
+    width: 402px;
+    height: 56px;
+    overflow: hidden;
+}
+
+#ulist a {
+    float: left;
+    width: 10px;
+    height: 54px;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    line-height: 56px;
+    text-align: center;
+    background: #fff;
+}
+
+#list {
+    float: left;
+    margin-left: 18px;
+    width: 372px;
+    position: relative;
+}
+
+#ulist li {
+    width: 62px;
+    float: left;
+}
+
+#list img {
+    width: 52px;
+}
+
+.wrap ul {
+    list-style: none;
+    float: left;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.wrap ul li {
+    float: left;
+    width: 56px;
+    height: 56px;
+    padding-right: 6px;
+}
+
+.wrap ul li img {
+    width: 52px;
+    height: 52px;
+    border: 1px solid #ccc;
+}
+
+#right {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    color: #333;
+}
+
+#left {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 2;
+    color: #fff;
+}
+
+.goodsinfo {
     width: 1200px;
-    padding-top: 10px;
+    margin: 50px auto;
+    height: 500px;
+}
+
+.goodsinfo-img {
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+.goodsinfo-img img {
+    width: 200px;
+    height: 200px;
+}
+
+.goodsinfo-word {
+    overflow: hidden;
+    float: left;
+}
+
+.p-name {
+    width: 350px;
+    height: 50px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.p-name .loadtitle {
+    font: 16px "微软雅黑";
+    color: #666666;
+}
+
+.p-price {
+    margin-left: 50px;
+    margin-top: 10px;
+    width: 300px;
+    height: 50px;
+    background: rgba(183, 183, 183, 0.4);
+    line-height: 50px;
+}
+
+.p-btn {
+    margin-top: 20px;
+}
+
+.p-btn input {
+    display: inline-block;
+    width: 50px;
+    height: 46px;
+    font-size: 20px;
+    font-family: "微软雅黑";
+    color: black;
+    margin-left: 50px;
+    border: 1px solid gray;
+    float: left;
+}
+
+.p-btn a {
+    display: block;
+    width: 100px;
+    height: 50px;
+    background-color: red;
+    font-size: 16px;
+    font-family: "微软雅黑";
+    color: white;
+    line-height: 50px;
+    text-align: center;
+    float: left;
+    margin-left: 10px;
+}
+
+// 右侧详情
+.shop_detail {
+    width: 700px;
+    padding: 100px 0 0 50px;
+    height: 400px;
+    float: left;
+    h1 {
+        font-size: 16px;
+        color: #333;
+        overflow: hidden;
+        line-height: 22px;
+        padding-bottom: 5px;
+        font-family: 'Microsoft YaHei';
+        font-weight: 200;
+    }
+}
+
+// id
+.proDetail_itemId {
+    position: relative;
+    height: 80px;
+    // line-height: 20px;
+    line-height: 80px;
+    color: #666;
+    border-top: 1px dotted #d9d9d9;
+    padding: 5px 0;
+    margin: 0;
+    dt {
+        width: 58px;
+        color: #999;
+        display: inline-block;
+        float: left;
+    }
+    dd {
+        float: left;
+    }
+}
+
+.productPrice {
+    height: 70px;
+}
+
+.productPrice .price {
+    color: #878787;
+    float: left;
+    dt {
+        float: left;
+        padding-top: 25px;
+        width: 58px;
+        color: #999;
+        height: 25px;
+    }
+    dd {
+        font-size: 15px;
+        color: #878787;
+        padding: 18px 0 0 0;
+        float: left;
+        height: 30px;
+        line-height: 20px;
+    }
+    span {
+        color: #c52e15;
+        font-weight: bold;
+        font-size: 30px;
+    }
+    strong {
+        color: #c52e15;
+        font-size: 30px;
+    }
+}
+
+// num
+.productnum {
+    position: relative;
+    height: 80px;
+    // line-height: 20px;
+    line-height: 80px;
+    color: #666;
+    padding: 5px 0;
+    margin: 0;
+    dt {
+        width: 58px;
+        color: #999;
+        display: inline-block;
+        float: left;
+    }
+    dd {
+        float: left;
+    }
+}
+
+.opanum {
+    height: 60px;
+}
+
+.reduceQuantity,
+.addQuantity {
+    display: block;
+    float: left;
+    width: 24px;
+    height: 24px;
+    border: solid 1px #999999;
+    text-align: center;
+    line-height: 24px;
+    background: #fff;
+    font-family: Arial;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.pCount {
+    width: 48px;
+    display: block;
+    float: left;
+    font-family: Arial;
+    text-align: center;
+    height: 24px;
+    line-height: 24px;
+    padding: 0px;
+    margin: 0;
+    border: 1px solid #999;
+    font-size: 14px;
+}
+
+.opanum {
+    padding-top: 25px;
+    height: 55px;
+    line-height: 80px;
+}
+
+// 购物车
+.addtocart {
+    height: 60px;
+    padding-top: 40px;
+}
+
+.btn_exchange {
+    background: url(../img/vi_btn.png) 0 0 no-repeat;
+    width: 127px;
+    height: 36px;
+    text-indent: -999em;
+    overflow: hidden;
+    display: block;
+    float: left;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.btn_add2cart {
+    background: url(../img/vi_btn.png) -137px 0 no-repeat;
+    width: 160px;
+    height: 36px;
+    text-indent: -999em;
+    overflow: hidden;
+    display: block;
+    float: left;
+    cursor: pointer;
+    margin-right: 30px;
 }

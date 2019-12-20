@@ -52,7 +52,7 @@ class Lunbo {
     click_tab() {
         // 其他图片消失
         // 其他圆点清除背景
-        console.log(this.indexh)
+        // console.log(this.indexh)
         let _this = this;
         for (let i = 0; i < this.lb_pic.length; i++) {
             // this.lb_pic[i].style.display = 'none';
@@ -81,8 +81,8 @@ class Lunbo {
         // }, function() {
         //     _this.lb_pic[_this.indexh].style.display = 'block';
         // })
-        console.log('前' + this.indexq);
-        console.log('后' + this.indexh)
+        // console.log('前' + this.indexq);
+        // console.log('后' + this.indexh)
 
 
         // 对应的圆点active
@@ -121,16 +121,16 @@ class Tab {
         this.ul_len = +$('.slide-items ul', 'all')[0].offsetHeight;
     }
     init() {
-        console.log(this.slide_index);
-        console.log(this.ul_len);
+        // console.log(this.slide_index);
+        // console.log(this.ul_len);
 
         let _this = this;
         for (let i = 0; i < this.slide_index.length; i++) {
             // 鼠标移入事件
             this.slide_index[i].onmouseover = function() {
                 let top = -(_this.ul_len * _this.slide_index[i].getAttribute('index'));
-                console.log(top)
-                    // 清空acitve样式
+                // console.log(top)
+                // 清空acitve样式
                 for (let j = 0; j < _this.slide_index.length; j++) {
                     _this.slide_index[j].className = '';
                 }
@@ -222,25 +222,29 @@ class stairs {
 
         this.stairs_yz();
         this.stairs_tab();
-        console.log(this.arr)
+
     }
 
 
     // 懒加载
     lazyload() {
 
-        let img = $('img', 'all');
-        for (let i = this.count; i < img.length; i++) {
+        let oLi = $('.col_main li', 'all');
+        // console.log(img);
+        for (let i = this.count; i < oLi.length; i++) {
 
-            if (img[i].getAttribute('data-src')) {
-                if (img[i].offsetTop < this.seeHeight + this.offtop) {
-                    this.count = i;
-                    setTimeout(function() {
-                        img[i].src = img[i].getAttribute("data-src");
-                        console.log(i);
-                    }, 1000)
-                }
+            // if (img[i].getAttribute('data-src')) {
+            // if (this.arr[0] + img[i].offsetTop < this.seeHeight + this.offtop - 100) {
+            if (oLi[i].offsetTop < this.seeHeight + this.offtop - 200) {
+
+                this.count = i;
+                setTimeout(function() {
+                    let img = oLi[i].children[0].children[0];
+                    img.src = img.getAttribute("data-src");
+                    console.log(i);
+                }, 50)
             }
+            // }
         }
     }
 
@@ -281,7 +285,7 @@ class stairs {
     stairs_yz() {
 
             // let top = this.getSP();
-            console.log(this.offtop)
+            // console.log(this.offtop)
             if (this.offtop >= 700) {
                 this.louti.style.display = 'block';
             } else {
