@@ -35,13 +35,13 @@ class Lunbo {
             }
 
             // 鼠标移入取消自动轮播
-            this.lb_pic[i].onmouseover = function() {
-                clearInterval(_this.timer)
+            this.lb_pic[i].onmouseover = () => {
+                clearInterval(this.timer)
             }
 
             // 鼠标移出开始自动轮播
-            this.lb_pic[i].onmouseout = function() {
-                _this.play_auto();
+            this.lb_pic[i].onmouseout = () => {
+                this.play_auto();
             }
         }
         this.play_auto();
@@ -59,32 +59,8 @@ class Lunbo {
             bufferMove(this.lb_pic[i], { opacity: 0 });
             this.lb_index[i].className = '';
         }
-        // if (this.indexh < 6) {
-        //     bufferMove(this.lb_spic[this.indexq], { opacity: 0 });
-        //     bufferMove(this.lb_spic[this.indexh], { opacity: 100 });
-        //     console.log(1);
-        // }
-        // if (this.indexh == 6) {
-        //     bufferMove(this.lb_spic[this.indexq], { opacity: 0 });
-        //     console.log(2);
-        // }
-        // if (this.indexq == 6) {
-        //     bufferMove(this.lb_spic[this.indexh], { opacity: 100 });
-        //     console.log(3);
-        // }
-
         // 使对应的图片出现
-        // this.lb_pic[this.indexh].style.display = 'block';
         bufferMove(this.lb_pic[this.indexh], { opacity: 100 });
-        // bufferMove(this.lb_pic[this.indexh], {
-        //     opacity: 1
-        // }, function() {
-        //     _this.lb_pic[_this.indexh].style.display = 'block';
-        // })
-        // console.log('前' + this.indexq);
-        // console.log('后' + this.indexh)
-
-
         // 对应的圆点active
         this.lb_index[this.indexh].className = 'active';
     }
@@ -93,18 +69,18 @@ class Lunbo {
     // 自动轮播
     play_auto() {
         let _this = this;
-        this.timer = setInterval(function() {
+        this.timer = setInterval(() => {
 
-            _this.indexh++;
-            if (_this.indexh >= 6) {
-                _this.indexh = 0;
-                _this.indexq = 6;
+            this.indexh++;
+            if (this.indexh >= 6) {
+                this.indexh = 0;
+                this.indexq = 6;
             }
-            _this.click_tab();
-            if (_this.indexq == 6) {
-                _this.indexq = 0;
+            this.click_tab();
+            if (this.indexq == 6) {
+                this.indexq = 0;
             }
-            _this.indexq++;
+            this.indexq++;
 
 
 
@@ -171,15 +147,15 @@ class stairs {
         this.offtop = this.getSP();
 
         // 滚轮事件
-        window.onscroll = function() {
-            _this.offtop = _this.getSP();
+        window.onscroll = () => {
+            this.offtop = this.getSP();
             // 楼梯显示消失判断
-            _this.stairs_yz();
+            this.stairs_yz();
             // 楼梯切换
-            _this.stairs_tab();
+            this.stairs_tab();
 
             // 懒加载
-            _this.lazyload();
+            this.lazyload();
 
 
 

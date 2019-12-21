@@ -37,7 +37,7 @@ const source = require('vinyl-source-stream'); //文件流
 //         .pipe(gulp.dest('dist/font/'));
 // });
 gulp.task('copyjpg', function() {
-    return gulp.src('src/img/*.jpg')
+    return gulp.src('src/img/*.{jpg,gif}')
         .pipe(gulp.dest('dist/img/'));
 });
 

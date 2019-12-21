@@ -24,12 +24,12 @@ class register {
 
         // 1.用户名验证
         //1.1获得焦点
-        this.oInput[0].onfocus = function() {
-            if (this.value === '') {
-                _this.oInp_res[0].className = 'tip wram';
-                // addClass(_this.oInp_res[0], wram)
-                _this.oInp_res[0].innerHTML = '设置你的登录名'
-                _this.pass[0] = false;
+        this.oInput[0].onfocus = () => {
+            if (this.oInput[0].value === '') {
+                this.oInp_res[0].className = 'tip wram';
+                // addClass(this.oInp_res[0], wram)
+                this.oInp_res[0].innerHTML = '设置你的登录名'
+                this.pass[0] = false;
             }
         }
 
@@ -73,19 +73,19 @@ class register {
 
         // 2.密码验证
         // 2.1获得焦点
-        this.oInput[1].onfocus = function() {
-            if (this.value === '') {
-                _this.oInp_res[1].className = 'tip wram';
-                _this.oInp_res[1].innerHTML = '设置你的密码'
+        this.oInput[1].onfocus = () => {
+            if (this.oInput[1].value === '') {
+                this.oInp_res[1].className = 'tip wram';
+                this.oInp_res[1].innerHTML = '设置你的密码'
             }
         }
 
         // 2.2失去焦点
-        this.oInput[1].onblur = function() {
-            if (this.value === '') {
-                _this.oInp_res[1].className = 'tip error';
-                _this.oInp_res[1].innerHTML = '密码不能为空'
-                _this.pass[1] = false;
+        this.oInput[1].onblur = () => {
+            if (this.oInput[1].value === '') {
+                this.oInp_res[1].className = 'tip error';
+                this.oInp_res[1].innerHTML = '密码不能为空'
+                this.pass[1] = false;
             }
 
         }
@@ -104,23 +104,23 @@ class register {
 
         // 3.确认密码验证
         // 3.1获得焦点
-        this.oInput[2].onfocus = function() {
+        this.oInput[2].onfocus = () => {
 
-            if (this.value === '') { //获得焦点为空
-                _this.oInp_res[2].innerHTML = '请确认您刚输入的密码';
-                _this.oInp_res[2].className = 'tip wram';
-                _this.pass[2] = false;
+            if (this.oInput[2].value === '') { //获得焦点为空
+                this.oInp_res[2].innerHTML = '请确认您刚输入的密码';
+                this.oInp_res[2].className = 'tip wram';
+                this.pass[2] = false;
             }
 
         }
 
         // 3.2失去焦点
-        this.oInput[2].onblur = function() {
+        this.oInput[2].onblur = () => {
 
-            if (this.value === '') { //获得焦点为空
-                _this.oInp_res[2].innerHTML = '请确认密码';
-                _this.oInp_res[2].className = 'tip error';
-                _this.pass[2] = false;
+            if (this.oInput[2].value === '') { //获得焦点为空
+                this.oInp_res[2].innerHTML = '请确认密码';
+                this.oInp_res[2].className = 'tip error';
+                this.pass[2] = false;
             }
 
         }
@@ -264,6 +264,8 @@ class register {
             }
             if (flag == 2) {
                 alert('注册成功');
+                // location.href = 'index.html';
+                // return false;
             }
 
 

@@ -114,11 +114,19 @@ $color:$color1 $color2 $color3 $color4 $color5;
         height: 550px;
         float: left;
         overflow: hidden;
+        a {
+            text-align: center;
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            line-height: 200px;
+        }
         li:hover {
             box-shadow: 0 16px 30px -14px rgba(0, 36, 100, 0.3);
             transition: box-shadow .5s;
             top: -2px
         }
+        img {}
     }
     li {
         position: relative;
