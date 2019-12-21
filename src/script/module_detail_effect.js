@@ -75,15 +75,17 @@ class detail_effect {
     fdj() {
         let _this = this;
         // 1.移入显示
-        this.spic.onmouseover = function() {
+        this.spic.onmouseover = () => {
             // var e = e || window.event;
-            _this.fdj_show();
+            this.fdj_show();
             //设置小放大镜大小
-            _this.sf.style.width = _this.spic.offsetWidth * _this.bf.offsetWidth / _this.bpic.offsetWidth + 'px';
-            _this.sf.style.height = _this.spic.offsetHeight * _this.bf.offsetHeight / _this.bpic.offsetHeight + 'px';
-            _this.scale = _this.bf.offsetWidth / _this.sf.offsetWidth;
+            // console.log(1)
+            this.sf.style.width = this.spic.offsetWidth * this.bf.offsetWidth / this.bpic.offsetWidth + 'px';
+            this.sf.style.height = this.spic.offsetHeight * this.bf.offsetHeight / this.bpic.offsetHeight + 'px';
+            this.scale = this.bf.offsetWidth / this.sf.offsetWidth;
             // 小放大镜的移动
-            this.onmousemove = function(e) {
+            this.spic.onmousemove = function(e) {
+                // console.log(1);
                 var e = e || window.event;
                 _this.spic_move(e);
             }
@@ -100,7 +102,7 @@ class detail_effect {
 
     // 1.小放大镜移动
     spic_move(e) {
-
+        // console.log(1);
         let l = e.clientX - this.goodsinfo.offsetLeft - this.sf.offsetWidth / 2;
         let t = e.clientY - this.goodsinfo.offsetTop - this.sf.offsetHeight / 2;
         if (l <= 0) {

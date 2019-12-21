@@ -49,11 +49,11 @@ gulp.task('uglifyhtml', function() {
 });
 
 //4.压缩css。
-gulp.task('uglifycss', function() {
-    return gulp.src('src/css/*.css')
-        .pipe(css()) //应用html包
-        .pipe(gulp.dest('dist/css/'));
-});
+// gulp.task('uglifycss', function() {
+//     return gulp.src('src/css/*.css')
+//         .pipe(css()) //应用html包
+//         .pipe(gulp.dest('dist/css/'));
+// });
 
 //5.利用sass，生成压缩css。 11
 gulp.task('compilesass', function() {

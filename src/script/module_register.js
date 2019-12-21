@@ -140,33 +140,33 @@ class register {
 
         //4.邮箱验证
         //4.1获得焦点
-        this.oInput[3].onfocus = function() {
+        this.oInput[3].onfocus = () => {
 
-            if (this.value === '') { //起始为空的状态
-                _this.oInp_res[3].innerHTML = '请输入邮箱'
-                _this.oInp_res[3].className = 'tip wram'
-                _this.pass[3] = false;
+            if (this.oInput[3].value === '') { //起始为空的状态
+                this.oInp_res[3].innerHTML = '请输入邮箱'
+                this.oInp_res[3].className = 'tip wram'
+                this.pass[3] = false;
             }
 
         }
 
         //4.2失去焦点
-        this.oInput[3].onblur = function() {
+        this.oInput[3].onblur = () => {
             var reg_email = /^(\w+[\+\-\_\.]*\w+)\@(\w+[\+\-\_\.]*\w+)\.(\w+[\+\-\_\.]*\w+)$/;
-            if (this.value !== '') { //内容不为空
-                if (reg_email.test(this.value)) { //为true通过
-                    _this.oInp_res[3].className = 'tip success'
-                    _this.oInp_res[3].innerHTML = '';
-                    _this.pass[3] = true;
+            if (this.oInput[3].value !== '') { //内容不为空
+                if (reg_email.test(this.oInput[3].value)) { //为true通过
+                    this.oInp_res[3].className = 'tip success'
+                    this.oInp_res[3].innerHTML = '';
+                    this.pass[3] = true;
                 } else { //不通过
-                    _this.oInp_res[3].innerHTML = '邮箱格式有问题';
-                    _this.oInp_res[3].className = 'tip error'
-                    _this.pass[3] = false;
+                    this.oInp_res[3].innerHTML = '邮箱格式有问题';
+                    this.oInp_res[3].className = 'tip error'
+                    this.pass[3] = false;
                 }
             } else {
-                _this.oInp_res[3].innerHTML = '邮箱不能为空'
-                _this.oInp_res[3].className = 'tip error'
-                _this.pass[3] = false;
+                this.oInp_res[3].innerHTML = '邮箱不能为空'
+                this.oInp_res[3].className = 'tip error'
+                this.pass[3] = false;
             }
 
         }
@@ -184,27 +184,27 @@ class register {
 
 
         //5.2获得焦点
-        this.oInput[4].onfocus = function() {
-            if (this.value === '') { //为空
-                _this.oInp_res[4].innerHTML = '请输入验证码';
-                _this.oInp_res[4].className = 'tip error'
-                _this.pass[4] = false;
+        this.oInput[4].onfocus = () => {
+            if (this.oInput[4].value === '') { //为空
+                this.oInp_res[4].innerHTML = '请输入验证码';
+                this.oInp_res[4].className = 'tip error'
+                this.pass[4] = false;
 
             }
         };
 
         //5.3失去焦点
-        this.oInput[4].onblur = function() {
-            if (this.value !== '') { //验证码不为空
-                if (_this.yzm.innerHTML == _this.oInput[4].value) { //验证码相同
-                    _this.oInp_res[4].className = 'tip success'
-                    _this.oInp_res[4].innerHTML = '';
-                    _this.pass[4] = true;
+        this.oInput[4].onblur = () => {
+            if (this.oInput[4].value !== '') { //验证码不为空
+                if (this.yzm.innerHTML == this.oInput[4].value) { //验证码相同
+                    this.oInp_res[4].className = 'tip success'
+                    this.oInp_res[4].innerHTML = '';
+                    this.pass[4] = true;
                 }
             } else { //为空
-                _this.oInp_res[4].innerHTML = '验证码不能为空';
-                _this.oInp_res[4].className = 'tip error'
-                _this.pass[4] = false;
+                this.oInp_res[4].innerHTML = '验证码不能为空';
+                this.oInp_res[4].className = 'tip error'
+                this.pass[4] = false;
 
 
             }
@@ -222,40 +222,40 @@ class register {
 
 
         // 表单提交
-        this.oForm.onsubmit = function() {
-            if (_this.oInput[0].value === '') {
-                _this.oInp_res[0].innerHTML = '用户名不能为空';
-                _this.oInp_res[0].className = 'tip error'
-                _this.pass[0] = false;
+        this.oForm.onsubmit = () => {
+            if (this.oInput[0].value === '') {
+                this.oInp_res[0].innerHTML = '用户名不能为空';
+                this.oInp_res[0].className = 'tip error'
+                this.pass[0] = false;
             }
-            if (_this.oInput[1].value === '') {
-                _this.oInp_res[1].innerHTML = '密码不能为空';
-                _this.oInp_res[1].className = 'tip error'
-                _this.pass[1] = false;
+            if (this.oInput[1].value === '') {
+                this.oInp_res[1].innerHTML = '密码不能为空';
+                this.oInp_res[1].className = 'tip error'
+                this.pass[1] = false;
             }
-            if (_this.oInput[2].value === '') {
-                _this.oInp_res[2].innerHTML = '';
-                _this.pass[2] = false;
+            if (this.oInput[2].value === '') {
+                this.oInp_res[2].innerHTML = '';
+                this.pass[2] = false;
             }
-            if (_this.oInput[3].value === '') {
-                _this.oInp_res[3].innerHTML = '手机号码不能为空';
-                _this.oInp_res[3].className = 'tip error'
-                _this.pass[3] = false;
+            if (this.oInput[3].value === '') {
+                this.oInp_res[3].innerHTML = '手机号码不能为空';
+                this.oInp_res[3].className = 'tip error'
+                this.pass[3] = false;
             }
-            if (_this.oInput[4].value === '') {
-                _this.oInp_res[4].innerHTML = '验证码不能为空';
-                _this.oInp_res[4].className = 'tip error'
-                _this.pass[4] = false;
+            if (this.oInput[4].value === '') {
+                this.oInp_res[4].innerHTML = '验证码不能为空';
+                this.oInp_res[4].className = 'tip error'
+                this.pass[4] = false;
             }
-            if (_this.pass[0] && _this.pass[1] && _this.pass[2] && _this.pass[3] && _this.pass[4]) {
-                if (!_this.pass[5]) {
+            if (this.pass[0] && this.pass[1] && this.pass[2] && this.pass[3] && this.pass[4]) {
+                if (!this.pass[5]) {
                     window.alert('请查看并接收用户服务条款')
                 }
             }
             //如果所有的条件都通过了，允许跳转。否则不允许。
             var flag = 1;
-            for (var i = 0; i < _this.pass.length; i++) {
-                if (_this.pass.indexOf(false) !== -1) {
+            for (var i = 0; i < this.pass.length; i++) {
+                if (this.pass.indexOf(false) !== -1) {
                     return false;
                 } else {
                     flag = 2;
@@ -355,4 +355,4 @@ class register {
 
 
 
-export { register };
+export { register }
